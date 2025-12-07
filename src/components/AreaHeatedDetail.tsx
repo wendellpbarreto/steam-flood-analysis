@@ -119,6 +119,19 @@ export function AreaHeatedDetail({
             <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
             <AccordionContent className="px-3 pb-3 space-y-2">
               <div className="space-y-2 text-xs">
+                <p className="font-semibold">Fórmula expandida</p>
+                <div className="rounded border bg-muted/40 p-2 space-y-1">
+                  <div className="font-mono text-[11px]">
+                    A_s = (H₀ · M₁ · h) / (4 · α₂ · M₂² · ΔT) · G(t_d)
+                  </div>
+                  <div className="font-mono text-[11px]">
+                    = ({formatLargeNumber(result.Ho_BtuPerHour, 6)} · {formatNumber(common.rho1C1, 6)} ·{" "}
+                    {formatNumber(common.zt, 6)}) / (4 · {formatScientific(result.alpha2)} ·{" "}
+                    {formatNumber(common.rho2C2, 6)}² · {formatNumber(result.deltaT, 6)}) ·{" "}
+                    {formatNumber(result.GTd, 6)}
+                  </div>
+                </div>
+
                 <p>ΔT = T_s - T_r = {formatNumber(result.deltaT, 4)} °F</p>
                 <p>
                   H_s = {formatNumber(result.enthalpySteam_BtuPerLb, 6)} Btu/lb
