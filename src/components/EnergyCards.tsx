@@ -385,6 +385,7 @@ function EquivalentRatioCard({
   cwDeltaTb: number;
   fSbLv: number;
 }) {
+  const denominator = cwDeltaTb + fSbLv;
   return (
     <Card>
       <CardHeader>
@@ -402,7 +403,7 @@ function EquivalentRatioCard({
           <div className="bg-primary/10 rounded-lg p-4 border-2 border-primary/20 space-y-2">
             <BlockMath math={"F_{ose} = \\dfrac{1000 \\cdot F_{os}}{C_w (T_s - T_b) + F_{sb} L_v}"} />
             <div className="text-xs text-muted-foreground bg-background/60 rounded p-2 space-y-1">
-              <p>Denominador = {formatNumber(cwDeltaTb + fSbLv, 3)} Btu/lb</p>
+              <p>Denominador = {formatNumber(denominator, 3)} Btu/lb</p>
               <p>
                 F_os = {formatNumber(fos, 4)} →{" "}
                 <span className="font-semibold text-primary">
@@ -433,9 +434,20 @@ function EquivalentRatioCard({
           <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
           <AccordionContent className="px-3 pb-3">
               <div className="text-xs space-y-2">
+                <p className="font-semibold">Fórmula expandida</p>
+                <div className="rounded border bg-muted/40 p-2 space-y-1 font-mono text-[11px]">
+                  <p>F_ose = 1000 · F_os / [C_w · (T_s - T_b) + F_sb · L_v]</p>
+                  <p>
+                    = 1000 · {formatNumber(fos, 6)} / [{formatNumber(cwDeltaTb, 6)} +
+                    {formatNumber(fSbLv, 6)}]
+                  </p>
+                  <p>
+                    = 1000 · {formatNumber(fos, 6)} / {formatNumber(denominator, 6)}
+                  </p>
+                </div>
                 <p>F_os = {formatNumber(fos, 4)}</p>
-                <p>Denominador = (CwTs - CwTb) + F_sb·L_v = {formatNumber(cwDeltaTb, 3)} + {formatNumber(fSbLv, 3)}</p>
-                <p>F_ose = 1000 · {formatNumber(fos, 4)} / {formatNumber(cwDeltaTb + fSbLv, 3)} = {formatNumber(fose, 4)}</p>
+                <p>Denominador = (CwTs - CwTb) + F_sb·L_v = {formatNumber(cwDeltaTb, 6)} + {formatNumber(fSbLv, 6)}</p>
+                <p>F_ose = 1000 · {formatNumber(fos, 6)} / {formatNumber(denominator, 6)} = {formatNumber(fose, 6)}</p>
               </div>
             </AccordionContent>
           </Accordion>
