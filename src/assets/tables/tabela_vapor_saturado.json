@@ -612,6 +612,16 @@
     "entropia": { "sf": 0.5667, "sg": 1.5274 }
   },
   {
+    "temp_F": 420,
+    "pressao_psia": 308.78,
+    "entalpia": { "hf": 396.9, "hfg": 806.2, "hg": 1203.1 }
+  },
+  {
+    "temp_F": 425,
+    "pressao_psia": 325.87,
+    "entalpia": { "hf": 402.4, "hfg": 801.1, "hg": 1203.5 }
+  },
+  {
     "temp_F": 460,
     "pressao_psia": 466.87,
     "vol_esp": { "vf": 0.0196, "vg": 0.9942 },

@@ -3,8 +3,8 @@ import { getTcdByFhv } from "../../data/tables/fhv-tcd";
 import {
   getEnthalpyByPressure,
   calculateSteamEnthalpy,
+  getEnthalpyByTemperature,
 } from "../../data/tables/saturated-steam";
-import { calculateG1 } from "./math-utils";
 
 export interface CriticalTimeResult {
   criticalTime_years: number;
@@ -26,18 +26,24 @@ export function calculateCriticalTime(common: CommonData): CriticalTimeResult {
   const Hv = enthalpyByPressure.hg;
   const fs = common.fsd;
   const Hs = calculateSteamEnthalpy(fs, HL, Hv);
+  const hRes = getEnthalpyByTemperature(common.Tr).hf;
+  const HsEffective = Hs - hRes;
 
-  const G1_value = 1 - (fs * common.Lv) / Hs;
+  const G1_value = HsEffective > 0 ? 1 - (fs * common.Lv) / HsEffective : 0;
 
-  const tcd_calculated = findTcdByG1(G1_value);
+  // FHV conforme planilha: fhv = fsd * (Hg - Hl) / (H_s,eff)
+  const fhvDirect =
+    HsEffective > 0 ? (fs * (Hv - HL)) / HsEffective : 0;
 
-  const fhv = calculateFhvFromTcd(tcd_calculated);
-  const tcdResult = getTcdByFhv(fhv);
+  const tcdResult = getTcdByFhv(fhvDirect);
   const tcd_from_table = tcdResult.tcd;
 
-  const znSquared = common.zn * common.zn;
-  const tCriticalSeconds = (tcd_from_table * znSquared) / alpha2;
-  const tCriticalHours = tCriticalSeconds / 3600.0;
+  // Tempo crítico usando definição t_d = t_cd e t_d = 4 (M2/M1)^2 (alpha2/h^2) * t
+  const M1 = common.rho1C1;
+  const M2 = common.rho2C2;
+  const h = common.zn; // usa espessura líquida para tempo crítico
+  const factor = 4 * Math.pow(M2 / M1, 2) * (alpha2 / (h * h));
+  const tCriticalHours = factor > 0 ? tcd_from_table / factor : 0;
   const tCriticalDays = tCriticalHours / 24.0;
   const tCriticalYears = tCriticalDays / 365.0;
 
@@ -46,48 +52,10 @@ export function calculateCriticalTime(common: CommonData): CriticalTimeResult {
     criticalTime_days: tCriticalDays,
     criticalTime_hours: tCriticalHours,
     G1_value,
-    tcd_calculated,
+    tcd_calculated: tcd_from_table,
     tcd_from_table,
-    fhv,
+    fhv: fhvDirect,
     alpha2,
     interpolationUsed: tcdResult.interpolated,
   };
-}
-
-function calculateFhvFromTcd(tcd: number): number {
-  const sqrtTcd = Math.sqrt(tcd);
-  return sqrtTcd / (1 + sqrtTcd);
-}
-
-function findTcdByG1(G1_value: number): number {
-  if (G1_value <= 0) {
-    return 0;
-  }
-
-  if (G1_value >= 1) {
-    return 100;
-  }
-
-  let lower = 0;
-  let upper = 100;
-  const tolerance = 1e-6;
-  const maxIterations = 100;
-
-  for (let i = 0; i < maxIterations; i++) {
-    const tcd = (lower + upper) / 2;
-    const G1_calculated = calculateG1(tcd);
-    const diff = G1_calculated - G1_value;
-
-    if (Math.abs(diff) < tolerance) {
-      return tcd;
-    }
-
-    if (diff > 0) {
-      upper = tcd;
-    } else {
-      lower = tcd;
-    }
-  }
-
-  return (lower + upper) / 2;
 }

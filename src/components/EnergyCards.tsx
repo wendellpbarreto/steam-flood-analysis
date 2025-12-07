@@ -130,9 +130,9 @@ function EnergyLostCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3 space-y-2">
+        <Accordion>
+          <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3 space-y-2">
               <p className="text-sm mb-2">Balanço energético:</p>
               <p className="text-sm">
                 <InlineMath math={"E_t = \\dfrac{Q_{armazenado}}{Q_{tot}}"} /> ⇒{" "}
@@ -147,9 +147,9 @@ function EnergyLostCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3">
+        <Accordion>
+          <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3">
               <div className="text-xs space-y-2">
                 <p>Q_tot = H₀ · t = {formatLarge(totalHeat)} Btu</p>
                 <p>E_t = {formatNumber(efficiency, 4)} (Myhill &amp; Stegemeier)</p>
@@ -226,9 +226,9 @@ function SteamVolumeCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3 space-y-2">
+        <Accordion>
+          <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3 space-y-2">
               <p className="text-sm">
                 <InlineMath math={"V_1"} /> é o volume de vapor necessário para fornecer a
                 energia armazenada na zona aquecida considerando eficiência térmica e entalpia da água.
@@ -242,9 +242,9 @@ function SteamVolumeCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3">
+        <Accordion>
+          <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3">
               <div className="text-xs space-y-2">
                 <p>Δh_água = Cw(T_s - T_r) + f_sd·L_v = {formatNumber(deltaHWater, 3)} Btu/lb</p>
                 <p>E_t = {formatNumber(efficiency, 4)} (Myhill &amp; Stegemeier)</p>
@@ -324,9 +324,9 @@ function OilSteamRatioCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3 space-y-2">
+        <Accordion>
+          <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3 space-y-2">
               <p className="text-sm">
                 <InlineMath math={"N_p"} /> representa o volume de óleo deslocado pela frente térmica.
               </p>
@@ -339,9 +339,9 @@ function OilSteamRatioCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3">
+        <Accordion>
+          <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3">
               <div className="text-xs space-y-2">
                 <p>ΔS = S_o - S_or = {formatNumber(deltaS, 3)}</p>
                 <p>N_p = {formatLarge(np)} bbl (A_s·z_n·ϕ·ΔS / 5.615)</p>
@@ -414,9 +414,9 @@ function EquivalentRatioCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3 space-y-2">
+        <Accordion>
+          <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3 space-y-2">
               <p className="text-sm">
                 <InlineMath math={"F_{ose}"} /> normaliza a ROV para um consumo padrão de 1000 Btu/lb
                 de água, permitindo comparar casos com diferentes condições de caldeira.
@@ -429,9 +429,9 @@ function EquivalentRatioCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3">
+        <Accordion>
+          <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3">
               <div className="text-xs space-y-2">
                 <p>F_os = {formatNumber(fos, 4)}</p>
                 <p>Denominador = (CwTs - CwTb) + F_sb·L_v = {formatNumber(cwDeltaTb, 3)} + {formatNumber(fSbLv, 3)}</p>
@@ -505,9 +505,9 @@ function EnergyBalanceCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3 space-y-2">
+        <Accordion>
+          <AccordionTrigger>Fundamentação Teórica</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3 space-y-2">
               <p className="text-sm">
                 Índice de balanço energético compara a energia contida no óleo produzido com a
                 energia requerida no gerador.
@@ -521,9 +521,9 @@ function EnergyBalanceCard({
         </section>
 
         <section className="space-y-2">
-          <Accordion collapsible>
-            <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
-            <AccordionContent className="px-3 pb-3">
+        <Accordion>
+          <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
+          <AccordionContent className="px-3 pb-3">
               <div className="text-xs space-y-2">
                 <p>E_óleo = N_p · (13,1 + 5600·γ_o) = {formatLarge(oilEnergy)} Btu</p>
                 <p>Q_boiler = Q_tot / E_b = {formatLarge(boilerEnergy)} Btu</p>
@@ -552,14 +552,5 @@ function EnergyBalanceCard({
         </section>
       </CardContent>
     </Card>
-  );
-}
-
-function SummaryRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex items-center justify-between bg-muted/50 rounded px-3 py-2">
-      <span className="text-sm font-medium">{label}</span>
-      <span className="text-sm font-mono">{value}</span>
-    </div>
   );
 }

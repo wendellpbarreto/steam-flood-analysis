@@ -1,94 +1,93 @@
-# Serigado IV Steamflood Analytical Assessment
+# Serigado IV – Steamflood Analytical Assessment
 
-Aplicação web calculadora para análise analítica de injeção contínua de vapor no campo onshore **Serigado IV**.
-
-**Domínio**: steamfloodanalysis.com.br
+Calculadora web para análise analítica de injeção contínua de vapor (steamflood) no campo onshore **Serigado IV**. Inclui preset do caso real, interpolação de tabelas termodinâmicas e cards detalhados com fórmulas (KaTeX) para os itens A–H (área aquecida, tempo crítico, eficiência térmica, perdas, volumes e balanço energético).
 
 ---
 
 ## 🚀 Início Rápido
 
-### Instalação
+Requisitos: Node 18+.
 
+Instalação (pnpm recomendado):
+```bash
+pnpm install
+```
+ou
 ```bash
 npm install
 ```
 
-### Desenvolvimento
-
+Desenvolvimento:
 ```bash
-npm run dev
+pnpm dev
+```
+App em `http://localhost:5173`.
+
+Build:
+```bash
+pnpm build
 ```
 
-A aplicação estará disponível em `http://localhost:5173`
-
-### Build
-
+Preview:
 ```bash
-npm run build
+pnpm preview
 ```
 
-### Preview
-
+Testes:
 ```bash
-npm run preview
+pnpm test
 ```
 
 ---
 
-## 🛠️ Stack Tecnológica
+## 🛠️ Stack
 
-- **Vite** - Build tool e dev server
-- **React** - Biblioteca UI
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Framework CSS utility-first
-- **Magic UI** - Componentes pré-construídos
-- **Zod** - Validação de schemas
-
-Para mais detalhes, consulte [STACK.md](./STACK.md)
+- **Vite + React + TypeScript**
+- **Tailwind CSS** (tema custom inspirado na marca)
+- **react-katex** para fórmulas
+- **Zod** para validação
+- **Vitest** para testes de cálculos
 
 ---
 
 ## 📚 Documentação
 
-Toda a documentação do projeto está em `docs/`:
-
-- **[README.md](./docs/README.md)** - Visão geral do projeto
-- **[PLANEJAMENTO.md](./docs/PLANEJAMENTO.md)** - Plano de desenvolvimento
-- **[CHECKPOINT_1.md](./docs/CHECKPOINT_1.md)** - Detalhamento do primeiro checkpoint
-- **[MODELO_TECNICO.md](./docs/MODELO_TECNICO.md)** - Detalhamento técnico
+- Visão técnica e cálculos: `docs/`
+  - `docs/PROJETO.md` – visão geral
+  - `docs/MODELO_TECNICO.md` – fundamentação e equações
+  - `docs/calculos/` – itens A–H detalhados
+  - Tabelas: `docs/tabelas/` (referência) e `src/assets/tables/` (uso na aplicação)
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura
 
 ```
 steamfloodanalysis/
-├── docs/              # Documentação
+├── docs/                 # Documentação técnica e cálculos
+├── public/               # Assets estáticos (favicon, logo)
 ├── src/
-│   ├── components/    # Componentes React
-│   ├── lib/          # Lógica de negócio
-│   ├── data/         # Dados estáticos
-│   └── hooks/        # Custom hooks
-├── public/           # Assets estáticos
+│   ├── assets/           # Ícones e tabelas JSON
+│   ├── components/       # UI React (cards de itens A–H, forms)
+│   ├── data/             # Presets e tabelas auxiliares (fhv-tcd, vapor saturado)
+│   └── lib/              # Cálculos (área, t_c, eficiência, volumes, balanço)
 └── ...
 ```
 
 ---
 
-## 🎯 Status do Projeto
+## 🎯 Status
 
-- [x] Setup inicial do projeto
-- [x] Configuração Vite + TypeScript + Tailwind
-- [x] Documentação da stack
-- [ ] Implementação do preset Serigado IV
-- [ ] Cálculo do Item A) Área Aquecida
-- [ ] Interface de edição de valores
-- [ ] Visualização de fórmulas e resultados
+- [x] Preset Serigado IV e inputs editáveis
+- [x] Itens A–H implementados e exibidos em cards (KaTeX + passos detalhados)
+- [x] Interpolação de tabelas de vapor saturado e fhv–tcd
+- [x] Tema custom (paleta da marca, favicon/logo no header)
+- [x] Testes de cálculo e benchmarks (Vitest)
+- [ ] Inclusão de outras tabelas/temperaturas (ex.: faixas adicionais no vapor saturado)
+- [ ] Exportar resultados (CSV/JSON) e comparativos entre casos
 
 ---
 
 ## 📝 Licença
 
-Projeto privado - Serigado IV Steamflood Analytical Assessment
-
+Projeto disponibilizado publicamente para fins técnicos/demonstrativos. Verifique requisitos de uso dos dados/tabelas antes de redistribuir.
