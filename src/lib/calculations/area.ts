@@ -145,12 +145,14 @@ export function calculateAreaHeated(
       ? (1000 / boilerWaterEnthalpyDelta_BtuPerLb) * oilSteamRatio_Fos
       : 0;
 
-  // Balanço de energia
+  // Balanço de energia (Ed = (13,1·γ_o + 5,6) · E_b · F_ose)
   const oilEnthalpyPerBbl_Btu = 13.1 + 5600 * common.gammaO;
   const oilEnergy_Btu = oilProduced_Np_bbl * oilEnthalpyPerBbl_Btu;
   const boilerEnergy_Btu = common.Eb > 0 ? totalHeat_Btu / common.Eb : 0;
   const energyBalanceIndex =
-    boilerEnergy_Btu > 0 ? oilEnergy_Btu / boilerEnergy_Btu : 0;
+    equivalentOilSteamRatio_Fose *
+    common.Eb *
+    (13.1 * common.gammaO + 5.6);
 
   return {
     caseName: getCaseName(caseIndex),

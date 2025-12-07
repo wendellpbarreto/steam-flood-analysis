@@ -74,8 +74,6 @@ export function EnergyCards({ result, presetData }: EnergyCardsProps) {
 
       <EnergyBalanceCard
         index={result.energyBalanceIndex}
-        oilEnergy={result.oilEnergy_Btu}
-        boilerEnergy={result.boilerEnergy_Btu}
         gammaO={common.gammaO}
         efficiencyBoiler={common.Eb}
       />
@@ -481,17 +479,14 @@ function EquivalentRatioCard({
 
 function EnergyBalanceCard({
   index,
-  oilEnergy,
-  boilerEnergy,
   gammaO,
   efficiencyBoiler,
 }: {
   index: number;
-  oilEnergy: number;
-  boilerEnergy: number;
   gammaO: number;
   efficiencyBoiler: number;
 }) {
+  const coefficient = 13.1 * gammaO + 5.6;
   return (
     <Card>
       <CardHeader>
@@ -507,14 +502,13 @@ function EnergyBalanceCard({
         <section className="space-y-3">
           <h3 className="text-base font-semibold">Fórmula e cálculo principal</h3>
           <div className="bg-primary/10 rounded-lg p-4 border-2 border-primary/20 space-y-2">
-            <BlockMath math={"E_{\\text{óleo}} = N_p \\cdot (13{,}1 + 5600\\,\\gamma_o)"} />
-            <BlockMath math={"Q_{\\text{boiler}} = \\dfrac{Q_{tot}}{E_b}"} />
-            <BlockMath math={"E_d = \\dfrac{E_{\\text{óleo}}}{Q_{\\text{boiler}}}"} />
+            <BlockMath math={"E_d = (13{,}1\\,\\gamma_o + 5{,}6)\\,E_b\\,F_{ose}"} />
             <div className="text-xs text-muted-foreground bg-background/60 rounded p-2 space-y-1">
               <p>γ_o = {formatNumber(gammaO, 3)} · E_b = {formatNumber(efficiencyBoiler, 3)}</p>
-              <p>E_óleo = {formatLarge(oilEnergy)} Btu · Q_boiler = {formatLarge(boilerEnergy)} Btu</p>
+              <p>F_ose = {formatNumber(index / (efficiencyBoiler * coefficient), 6)}</p>
               <p>
-                E_d = <span className="font-semibold text-primary">{formatNumber(index, 4)}</span>
+                E_d = (13,1·{formatNumber(gammaO, 3)} + 5,6) · {formatNumber(efficiencyBoiler, 3)} · F_ose
+                = <span className="font-semibold text-primary">{formatNumber(index, 4)}</span>
               </p>
             </div>
           </div>
@@ -541,9 +535,9 @@ function EnergyBalanceCard({
           <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
           <AccordionContent className="px-3 pb-3">
               <div className="text-xs space-y-2">
-                <p>E_óleo = N_p · (13,1 + 5600·γ_o) = {formatLarge(oilEnergy)} Btu</p>
-                <p>Q_boiler = Q_tot / E_b = {formatLarge(boilerEnergy)} Btu</p>
-                <p>E_d = E_óleo / Q_boiler = {formatNumber(index, 4)}</p>
+                <p>Coeficiente = 13,1·γ_o + 5,6 = {formatNumber(coefficient, 6)}</p>
+                <p>F_ose (calculado) = {formatNumber(index / (efficiencyBoiler * coefficient), 6)}</p>
+                <p>E_d = {formatNumber(coefficient, 6)} · {formatNumber(efficiencyBoiler, 6)} · F_ose = {formatNumber(index, 6)}</p>
               </div>
             </AccordionContent>
           </Accordion>
@@ -554,7 +548,7 @@ function EnergyBalanceCard({
           <div className="space-y-1">
             <p className="text-2xl font-bold text-primary">E_d = {formatNumber(index, 4)}</p>
             <p className="text-sm text-muted-foreground">
-              E_óleo = {formatLarge(oilEnergy)} Btu · Q_boiler = {formatLarge(boilerEnergy)} Btu
+              E_d = (13,1·γ_o + 5,6) · E_b · F_ose
             </p>
           </div>
         </section>
