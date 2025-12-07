@@ -22,10 +22,10 @@ export function IntermediateCalculations({
     }).format(value);
   };
 
-  const formatLargeNumber = (value: number): string => {
+  const formatLargeNumber = (value: number, decimals: number = 2): string => {
     return new Intl.NumberFormat("pt-BR", {
-      maximumFractionDigits: 2,
-      minimumFractionDigits: 2,
+      maximumFractionDigits: decimals,
+      minimumFractionDigits: decimals,
     }).format(value);
   };
 
@@ -143,13 +143,13 @@ export function IntermediateCalculations({
                 Entalpia Efetiva (H_s - h_res)
               </span>
               <span className="text-sm font-mono">
-                {formatNumber(result.Ho_enthalpy_BtuPerLb, 2)} Btu/lb
+                {formatNumber(result.Ho_enthalpy_BtuPerLb, 6)} Btu/lb
               </span>
             </div>
             <code className="text-xs text-muted-foreground">
-              H_s - h_res = {formatNumber(result.enthalpySteam_BtuPerLb, 2)} -{" "}
-              {formatNumber(result.enthalpyReservoirFromTable_BtuPerLb, 2)} ={" "}
-              {formatNumber(result.Ho_enthalpy_BtuPerLb, 2)} Btu/lb
+              H_s - h_res = {formatNumber(result.enthalpySteam_BtuPerLb, 6)} -{" "}
+              {formatNumber(result.enthalpyReservoirFromTable_BtuPerLb, 6)} ={" "}
+              {formatNumber(result.Ho_enthalpy_BtuPerLb, 6)} Btu/lb
             </code>
           </div>
 
@@ -157,18 +157,18 @@ export function IntermediateCalculations({
             <div className="flex items-center justify-between mb-1">
               <span className="text-sm font-medium">Taxa de Calor (H₀)</span>
               <span className="text-sm font-mono">
-                {formatLargeNumber(result.Ho_BtuPerHour)} Btu/h
+                {formatLargeNumber(result.Ho_BtuPerHour, 6)} Btu/h
               </span>
             </div>
             <code className="text-xs text-muted-foreground">
               H₀ = ṁ × (H_s - h_res)
             </code>
             <code className="text-xs text-muted-foreground block mt-1">
-              H₀ = {formatLargeNumber(result.massRate_lbPerHour)} lb/h ×{" "}
-              {formatNumber(result.Ho_enthalpy_BtuPerLb, 2)} Btu/lb
+              H₀ = {formatLargeNumber(result.massRate_lbPerHour, 6)} lb/h ×{" "}
+              {formatNumber(result.Ho_enthalpy_BtuPerLb, 6)} Btu/lb
             </code>
             <code className="text-xs text-muted-foreground block mt-1 font-semibold">
-              H₀ = {formatLargeNumber(result.Ho_BtuPerHour)} Btu/h
+              H₀ = {formatLargeNumber(result.Ho_BtuPerHour, 6)} Btu/h
             </code>
           </div>
 
@@ -179,13 +179,13 @@ export function IntermediateCalculations({
             <div className="flex items-center justify-between mb-1">
               <span className="text-sm font-medium">Taxa Mássica (ṁ)</span>
               <span className="text-sm font-mono">
-                {formatLargeNumber(result.massRate_lbPerHour)} lb/h
+                {formatLargeNumber(result.massRate_lbPerHour, 6)} lb/h
               </span>
             </div>
             <code className="text-xs text-muted-foreground">
               ṁ = rateBblPerDay × 350 / 24 ={" "}
               {formatNumber(result.rateBblPerDay)} × 350 / 24 ={" "}
-              {formatLargeNumber(result.massRate_lbPerHour)} lb/h
+              {formatLargeNumber(result.massRate_lbPerHour, 6)} lb/h
             </code>
           </div>
 
