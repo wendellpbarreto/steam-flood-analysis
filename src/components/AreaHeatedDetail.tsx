@@ -138,7 +138,7 @@ export function AreaHeatedDetail({
                   {formatLargeNumber(tHours, 4)} h
                 </p>
                 <p>
-                  t_d = {formatNumber(result.tDimensionless, 6)} · G(t_d) ={" "}
+                t_d = {formatNumber(result.tDimensionless, 10)} · G(t_d) ={" "}
                   {formatNumber(result.GTd, 6)}
                 </p>
                 <p>
