@@ -444,6 +444,10 @@ function EquivalentRatioCard({
                   <p>
                     = 1000 · {formatNumber(fos, 6)} / {formatNumber(denominator, 6)}
                   </p>
+                  <p>
+                    C_w(T_s - T_b) = {formatNumber(cwDeltaTb, 6)} · (Btu/lb);{" "}
+                    F_sb·L_v = {formatNumber(fSbLv, 6)} · (Btu/lb)
+                  </p>
                 </div>
                 <p>F_os = {formatNumber(fos, 4)}</p>
                 <p>Denominador = (CwTs - CwTb) + F_sb·L_v = {formatNumber(cwDeltaTb, 6)} + {formatNumber(fSbLv, 6)}</p>
