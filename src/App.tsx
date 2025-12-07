@@ -63,16 +63,12 @@ function App() {
           />
 
           {presetLoaded && data && (
-            <div className="grid gap-6 lg:grid-cols-3">
-              <div className="lg:col-span-2">
-                <ReservoirForm data={data} onDataChange={handleDataChange} />
-              </div>
-              <div className="lg:col-span-1">
-                <SteamRateCases
-                  cases={data.cases}
-                  onCasesChange={handleCasesChange}
-                />
-              </div>
+            <div className="grid gap-6 xl:grid-cols-[1.6fr_1.2fr]">
+              <ReservoirForm data={data} onDataChange={handleDataChange} />
+              <SteamRateCases
+                cases={data.cases}
+                onCasesChange={handleCasesChange}
+              />
             </div>
           )}
 

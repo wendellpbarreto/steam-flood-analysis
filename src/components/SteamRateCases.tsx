@@ -72,13 +72,13 @@ export function SteamRateCases({ cases, onCasesChange }: SteamRateCasesProps) {
 
           return (
             <div key={index} className="space-y-3">
-              <div className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg bg-muted/30">
-                <div className="flex items-center justify-center min-w-[100px]">
-                  <Badge variant="outline" className="text-sm font-semibold">
+              <div className="grid gap-4 p-4 border rounded-lg bg-muted/30 grid-cols-1 md:grid-cols-[130px_1fr_1fr] xl:grid-cols-[130px_1.15fr_1.15fr_auto] items-end">
+                <div className="flex items-center md:justify-start xl:justify-center">
+                  <Badge variant="outline" className="text-sm font-semibold px-3 py-2">
                     {caseName}
                   </Badge>
                 </div>
-                <div className="flex-1 space-y-2">
+                <div className="space-y-2">
                   <Label htmlFor={`case-rate-bbl-${index}`}>
                     Vazão (bbl/d)
                   </Label>
@@ -101,7 +101,7 @@ export function SteamRateCases({ cases, onCasesChange }: SteamRateCasesProps) {
                     </p>
                   )}
                 </div>
-                <div className="flex-1 space-y-2">
+                <div className="space-y-2">
                   <Label htmlFor={`case-rate-tons-${index}`}>
                     Vazão (t/d)
                   </Label>
@@ -126,7 +126,7 @@ export function SteamRateCases({ cases, onCasesChange }: SteamRateCasesProps) {
                   )}
                 </div>
                 {cases.length > 1 && (
-                  <div className="flex items-end">
+                  <div className="flex xl:justify-end">
                     <Button
                       variant="destructive"
                       size="sm"
@@ -154,4 +154,3 @@ export function SteamRateCases({ cases, onCasesChange }: SteamRateCasesProps) {
     </Card>
   )
 }
-

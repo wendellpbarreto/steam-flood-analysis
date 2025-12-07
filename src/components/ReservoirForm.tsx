@@ -32,7 +32,7 @@ export function ReservoirForm({ data, onDataChange }: ReservoirFormProps) {
       <CardContent className="space-y-6">
         <div>
           <h3 className="text-lg font-semibold mb-4">Temperaturas e Pressão</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             <div className="space-y-2">
               <Label htmlFor="Ts">Temperatura do Vapor (Ts)</Label>
               <Input
@@ -80,7 +80,7 @@ export function ReservoirForm({ data, onDataChange }: ReservoirFormProps) {
 
         <div>
           <h3 className="text-lg font-semibold mb-4">Gerador de Vapor</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             <div className="space-y-2">
               <Label htmlFor="Eb">Eficiência do Gerador (Eb)</Label>
               <Input
@@ -103,7 +103,7 @@ export function ReservoirForm({ data, onDataChange }: ReservoirFormProps) {
 
         <div>
           <h3 className="text-lg font-semibold mb-4">Propriedades do Reservatório</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             <div className="space-y-2">
               <Label htmlFor="zn">Espessura Líquida (zn)</Label>
               <Input
@@ -153,7 +153,7 @@ export function ReservoirForm({ data, onDataChange }: ReservoirFormProps) {
 
         <div>
           <h3 className="text-lg font-semibold mb-4">Propriedades do Óleo</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             <div className="space-y-2">
               <Label htmlFor="So">Saturação Inicial de Óleo (So)</Label>
               <Input
@@ -211,7 +211,7 @@ export function ReservoirForm({ data, onDataChange }: ReservoirFormProps) {
 
         <div>
           <h3 className="text-lg font-semibold mb-4">Propriedades Térmicas</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             <div className="space-y-2">
               <Label htmlFor="rho1C1">Capacidade Calorífica Zona Vapor (ρ1C1)</Label>
               <Input
@@ -263,7 +263,7 @@ export function ReservoirForm({ data, onDataChange }: ReservoirFormProps) {
 
         <div>
           <h3 className="text-lg font-semibold mb-4">Propriedades do Vapor e Água</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             <div className="space-y-2">
               <Label htmlFor="fsd">Qualidade Vapor Reservatório (fsd)</Label>
               <Input
@@ -340,4 +340,3 @@ export function ReservoirForm({ data, onDataChange }: ReservoirFormProps) {
     </Card>
   )
 }
-
