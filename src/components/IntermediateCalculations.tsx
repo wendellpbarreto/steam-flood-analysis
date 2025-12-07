@@ -87,36 +87,38 @@ export function IntermediateCalculations({
             </code>
           </div>
 
-          <div
-            id="calc-enthalpySteam"
-            className="bg-muted/50 p-3 rounded transition-all"
-          >
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-sm font-medium">
-                Entalpia do Vapor (H_s)
-              </span>
-              <span className="text-sm font-mono">
-                {formatNumber(result.enthalpySteam_BtuPerLb, 2)} Btu/lb
-              </span>
-            </div>
-            <code className="text-xs text-muted-foreground">
-              H_s = (1 - f_s) × H_L + f_s × H_v
-            </code>
-            <code className="text-xs text-muted-foreground block mt-1">
-              H_s = (1 - {formatNumber(common.fsd, 3)}) ×{" "}
-              {formatNumber(result.HL_BtuPerLb, 2)} +{" "}
-              {formatNumber(common.fsd, 3)} ×{" "}
-              {formatNumber(result.Hv_BtuPerLb, 2)}
-            </code>
-            <code className="text-xs text-muted-foreground block mt-1">
-              H_s = {formatNumber((1 - common.fsd) * result.HL_BtuPerLb, 2)} +{" "}
-              {formatNumber(common.fsd * result.Hv_BtuPerLb, 2)} ={" "}
-              {formatNumber(result.enthalpySteam_BtuPerLb, 2)} Btu/lb
-            </code>
+        <div
+          id="calc-enthalpySteam"
+          className="bg-muted/50 p-3 rounded transition-all"
+        >
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-sm font-medium">
+              Entalpia do Vapor Efetiva (H_s - h_res)
+            </span>
+            <span className="text-sm font-mono">
+              {formatNumber(result.Ho_enthalpy_BtuPerLb, 6)} Btu/lb
+            </span>
           </div>
+          <code className="text-xs text-muted-foreground">
+            H_s = (1 - f_s) × H_L + f_s × H_v
+          </code>
+          <code className="text-xs text-muted-foreground block mt-1">
+            H_s = (1 - {formatNumber(common.fsd, 3)}) ×{" "}
+            {formatNumber(result.HL_BtuPerLb, 6)} +{" "}
+            {formatNumber(common.fsd, 3)} ×{" "}
+            {formatNumber(result.Hv_BtuPerLb, 6)}
+          </code>
+          <code className="text-xs text-muted-foreground block mt-1">
+            H_s bruto = {formatNumber(result.enthalpySteam_BtuPerLb, 6)} Btu/lb · h_res ={" "}
+            {formatNumber(result.enthalpyReservoirFromTable_BtuPerLb, 6)} Btu/lb
+          </code>
+          <code className="text-xs text-muted-foreground block mt-1 font-semibold">
+            H_s - h_res = {formatNumber(result.Ho_enthalpy_BtuPerLb, 6)} Btu/lb
+          </code>
+        </div>
 
-          <div
-            id="calc-enthalpyReservoir"
+        <div
+          id="calc-enthalpyReservoir"
             className="bg-muted/50 p-3 rounded transition-all"
           >
             <div className="flex items-center justify-between mb-1">
