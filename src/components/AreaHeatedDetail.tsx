@@ -32,10 +32,10 @@ export function AreaHeatedDetail({
       minimumFractionDigits: decimals,
     }).format(value);
 
-  const formatLargeNumber = (value: number): string =>
+  const formatLargeNumber = (value: number, decimals: number = 2): string =>
     new Intl.NumberFormat("pt-BR", {
-      maximumFractionDigits: 2,
-      minimumFractionDigits: 2,
+      maximumFractionDigits: decimals,
+      minimumFractionDigits: decimals,
     }).format(value);
 
   const formatScientific = (value: number): string => value.toExponential(4);
@@ -66,7 +66,7 @@ export function AreaHeatedDetail({
                 {formatScientific(4 * result.alpha2 * common.rho2C2 * common.rho2C2 * result.deltaT)}
               </p>
               <p>
-                A_s = <span className="font-semibold text-primary">{formatLargeNumber(result.areaHeated_ft2)} ft²</span>
+                A_s = <span className="font-semibold text-primary">{formatLargeNumber(result.areaHeated_ft2, 6)} ft²</span>
               </p>
             </div>
           </div>
@@ -111,7 +111,7 @@ export function AreaHeatedDetail({
           <h3 className="text-base font-semibold">Resultado Final</h3>
           <div className="space-y-1">
             <p className="text-2xl font-bold text-primary">
-              A_s = {formatLargeNumber(result.areaHeated_ft2)} ft²
+              A_s = {formatLargeNumber(result.areaHeated_ft2, 6)} ft²
             </p>
             <p className="text-sm text-muted-foreground">
               Usando H₀ = {formatLargeNumber(result.Ho_BtuPerHour)} Btu/h, G(t_d) = {formatNumber(result.GTd, 6)} e ΔT = {formatNumber(result.deltaT)} °F
