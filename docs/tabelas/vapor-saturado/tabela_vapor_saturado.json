@@ -1,0 +1,990 @@
+[
+  {
+    "nota": "Tabela continuada: 162°F a 705.47°F (Ponto Crítico).",
+    "unidades": {
+      "temperatura": "°F",
+      "pressao": "psia",
+      "volume_especifico": "ft³/lbm",
+      "energia_interna": "Btu/lbm",
+      "entalpia": "Btu/lbm",
+      "entropia": "Btu/lbm·R"
+    }
+  },
+  {
+    "temp_F": 32,
+    "pressao_psia": 0.0886,
+    "vol_esp": { "vf": 0.01602, "vg": 3304.6 },
+    "energia_int": { "uf": -0.02, "ufg": 1021.3, "ug": 1021.3 },
+    "entalpia": { "hf": -0.02, "hfg": 1075.5, "hg": 1075.5 },
+    "entropia": { "sf": 0.0, "sfg": 2.1873, "sg": 2.1873 }
+  },
+  {
+    "temp_F": 34,
+    "pressao_psia": 0.096,
+    "vol_esp": { "vf": 0.01602, "vg": 3061.9 },
+    "energia_int": { "uf": 2.0, "ufg": 1020.0, "ug": 1022.0 },
+    "entalpia": { "hf": 2.0, "hfg": 1074.4, "hg": 1076.4 },
+    "entropia": { "sf": 0.0041, "sfg": 2.1762, "sg": 2.1802 }
+  },
+  {
+    "temp_F": 36,
+    "pressao_psia": 0.104,
+    "vol_esp": { "vf": 0.01602, "vg": 2839.0 },
+    "energia_int": { "uf": 4.01, "ufg": 1018.6, "ug": 1022.6 },
+    "entalpia": { "hf": 4.01, "hfg": 1073.2, "hg": 1077.2 },
+    "entropia": { "sf": 0.0081, "sfg": 2.1651, "sg": 2.1732 }
+  },
+  {
+    "temp_F": 38,
+    "pressao_psia": 0.1125,
+    "vol_esp": { "vf": 0.01602, "vg": 2634.2 },
+    "energia_int": { "uf": 6.02, "ufg": 1017.3, "ug": 1023.3 },
+    "entalpia": { "hf": 6.02, "hfg": 1072.1, "hg": 1078.1 },
+    "entropia": { "sf": 0.0122, "sfg": 2.1541, "sg": 2.1663 }
+  },
+  {
+    "temp_F": 40,
+    "pressao_psia": 0.1216,
+    "vol_esp": { "vf": 0.01602, "vg": 2445.8 },
+    "energia_int": { "uf": 8.03, "ufg": 1015.9, "ug": 1023.9 },
+    "entalpia": { "hf": 8.03, "hfg": 1071.0, "hg": 1079.0 },
+    "entropia": { "sf": 0.0162, "sfg": 2.1432, "sg": 2.1594 }
+  },
+  {
+    "temp_F": 42,
+    "pressao_psia": 0.1314,
+    "vol_esp": { "vf": 0.01602, "vg": 2272.4 },
+    "energia_int": { "uf": 10.03, "ufg": 1014.6, "ug": 1024.6 },
+    "entalpia": { "hf": 10.03, "hfg": 1069.8, "hg": 1079.9 },
+    "entropia": { "sf": 0.0202, "sfg": 2.1325, "sg": 2.1527 }
+  },
+  {
+    "temp_F": 44,
+    "pressao_psia": 0.1419,
+    "vol_esp": { "vf": 0.01602, "vg": 2112.8 },
+    "energia_int": { "uf": 12.04, "ufg": 1013.2, "ug": 1025.2 },
+    "entalpia": { "hf": 12.04, "hfg": 1068.7, "hg": 1080.7 },
+    "entropia": { "sf": 0.0242, "sfg": 2.1217, "sg": 2.1459 }
+  },
+  {
+    "temp_F": 46,
+    "pressao_psia": 0.1531,
+    "vol_esp": { "vf": 0.01602, "vg": 1965.7 },
+    "energia_int": { "uf": 14.05, "ufg": 1011.9, "ug": 1025.9 },
+    "entalpia": { "hf": 14.05, "hfg": 1067.6, "hg": 1081.6 },
+    "entropia": { "sf": 0.0282, "sfg": 2.1111, "sg": 2.1393 }
+  },
+  {
+    "temp_F": 48,
+    "pressao_psia": 0.1651,
+    "vol_esp": { "vf": 0.01602, "vg": 1830.0 },
+    "energia_int": { "uf": 16.05, "ufg": 1010.5, "ug": 1026.6 },
+    "entalpia": { "hf": 16.05, "hfg": 1066.4, "hg": 1082.5 },
+    "entropia": { "sf": 0.0321, "sfg": 2.1006, "sg": 2.1327 }
+  },
+  {
+    "temp_F": 50,
+    "pressao_psia": 0.178,
+    "vol_esp": { "vf": 0.01602, "vg": 1704.8 },
+    "energia_int": { "uf": 18.05, "ufg": 1009.2, "ug": 1027.2 },
+    "entalpia": { "hf": 18.05, "hfg": 1065.3, "hg": 1083.4 },
+    "entropia": { "sf": 0.0361, "sfg": 2.0901, "sg": 2.1262 }
+  },
+  {
+    "temp_F": 52,
+    "pressao_psia": 0.1916,
+    "vol_esp": { "vf": 0.01602, "vg": 1589.2 },
+    "energia_int": { "uf": 20.06, "ufg": 1007.8, "ug": 1027.9 },
+    "entalpia": { "hf": 20.06, "hfg": 1064.2, "hg": 1084.2 },
+    "entropia": { "sf": 0.04, "sfg": 2.0798, "sg": 2.1197 }
+  },
+  {
+    "temp_F": 54,
+    "pressao_psia": 0.2063,
+    "vol_esp": { "vf": 0.01603, "vg": 1482.4 },
+    "energia_int": { "uf": 22.06, "ufg": 1006.5, "ug": 1028.5 },
+    "entalpia": { "hf": 22.06, "hfg": 1063.1, "hg": 1085.1 },
+    "entropia": { "sf": 0.0439, "sfg": 2.0695, "sg": 2.1134 }
+  },
+  {
+    "temp_F": 56,
+    "pressao_psia": 0.2218,
+    "vol_esp": { "vf": 0.01603, "vg": 1383.6 },
+    "energia_int": { "uf": 24.06, "ufg": 1005.1, "ug": 1029.2 },
+    "entalpia": { "hf": 24.06, "hfg": 1061.9, "hg": 1086.0 },
+    "entropia": { "sf": 0.0478, "sfg": 2.0593, "sg": 2.107 }
+  },
+  {
+    "temp_F": 58,
+    "pressao_psia": 0.2384,
+    "vol_esp": { "vf": 0.01603, "vg": 1292.2 },
+    "energia_int": { "uf": 26.06, "ufg": 1003.8, "ug": 1029.8 },
+    "entalpia": { "hf": 26.06, "hfg": 1060.8, "hg": 1086.9 },
+    "entropia": { "sf": 0.0516, "sfg": 2.0491, "sg": 2.1008 }
+  },
+  {
+    "temp_F": 60,
+    "pressao_psia": 0.2561,
+    "vol_esp": { "vf": 0.01603, "vg": 1207.6 },
+    "energia_int": { "uf": 28.06, "ufg": 1002.4, "ug": 1030.5 },
+    "entalpia": { "hf": 28.06, "hfg": 1059.7, "hg": 1087.7 },
+    "entropia": { "sf": 0.0555, "sfg": 2.0391, "sg": 2.0946 }
+  },
+  {
+    "temp_F": 62,
+    "pressao_psia": 0.2749,
+    "vol_esp": { "vf": 0.01604, "vg": 1129.2 },
+    "energia_int": { "uf": 30.06, "ufg": 1001.1, "ug": 1031.2 },
+    "entalpia": { "hf": 30.06, "hfg": 1058.5, "hg": 1088.6 },
+    "entropia": { "sf": 0.0593, "sfg": 2.0291, "sg": 2.0885 }
+  },
+  {
+    "temp_F": 64,
+    "pressao_psia": 0.295,
+    "vol_esp": { "vf": 0.01604, "vg": 1056.5 },
+    "energia_int": { "uf": 32.06, "ufg": 999.8, "ug": 1031.8 },
+    "entalpia": { "hf": 32.06, "hfg": 1057.4, "hg": 1089.5 },
+    "entropia": { "sf": 0.0632, "sfg": 2.0192, "sg": 2.0824 }
+  },
+  {
+    "temp_F": 66,
+    "pressao_psia": 0.3163,
+    "vol_esp": { "vf": 0.01604, "vg": 989.1 },
+    "energia_int": { "uf": 34.06, "ufg": 998.4, "ug": 1032.5 },
+    "entalpia": { "hf": 34.06, "hfg": 1056.3, "hg": 1090.4 },
+    "entropia": { "sf": 0.067, "sfg": 2.0094, "sg": 2.0764 }
+  },
+  {
+    "temp_F": 68,
+    "pressao_psia": 0.3389,
+    "vol_esp": { "vf": 0.01605, "vg": 926.5 },
+    "energia_int": { "uf": 36.05, "ufg": 997.1, "ug": 1033.1 },
+    "entalpia": { "hf": 36.05, "hfg": 1055.2, "hg": 1091.2 },
+    "entropia": { "sf": 0.0708, "sfg": 1.9996, "sg": 2.0704 }
+  },
+  {
+    "temp_F": 70,
+    "pressao_psia": 0.3629,
+    "vol_esp": { "vf": 0.01605, "vg": 868.4 },
+    "energia_int": { "uf": 38.05, "ufg": 995.7, "ug": 1033.8 },
+    "entalpia": { "hf": 38.05, "hfg": 1054.0, "hg": 1092.1 },
+    "entropia": { "sf": 0.0745, "sfg": 1.99, "sg": 2.0645 }
+  },
+  {
+    "temp_F": 72,
+    "pressao_psia": 0.3884,
+    "vol_esp": { "vf": 0.01605, "vg": 814.3 },
+    "energia_int": { "uf": 40.05, "ufg": 994.4, "ug": 1034.4 },
+    "entalpia": { "hf": 40.05, "hfg": 1052.9, "hg": 1093.0 },
+    "entropia": { "sf": 0.0783, "sfg": 1.9804, "sg": 2.0587 }
+  },
+  {
+    "temp_F": 74,
+    "pressao_psia": 0.4155,
+    "vol_esp": { "vf": 0.01606, "vg": 764.1 },
+    "energia_int": { "uf": 42.05, "ufg": 993.0, "ug": 1035.1 },
+    "entalpia": { "hf": 42.05, "hfg": 1051.8, "hg": 1093.8 },
+    "entropia": { "sf": 0.0821, "sfg": 1.9708, "sg": 2.0529 }
+  },
+  {
+    "temp_F": 76,
+    "pressao_psia": 0.4442,
+    "vol_esp": { "vf": 0.01606, "vg": 717.4 },
+    "energia_int": { "uf": 44.04, "ufg": 991.7, "ug": 1035.7 },
+    "entalpia": { "hf": 44.04, "hfg": 1050.7, "hg": 1094.7 },
+    "entropia": { "sf": 0.0858, "sfg": 1.9614, "sg": 2.0472 }
+  },
+  {
+    "temp_F": 78,
+    "pressao_psia": 0.4746,
+    "vol_esp": { "vf": 0.01607, "vg": 673.9 },
+    "energia_int": { "uf": 46.04, "ufg": 990.3, "ug": 1036.4 },
+    "entalpia": { "hf": 46.04, "hfg": 1049.5, "hg": 1095.6 },
+    "entropia": { "sf": 0.0895, "sfg": 1.952, "sg": 2.0415 }
+  },
+  {
+    "temp_F": 80,
+    "pressao_psia": 0.5068,
+    "vol_esp": { "vf": 0.01607, "vg": 633.3 },
+    "energia_int": { "uf": 48.03, "ufg": 989.0, "ug": 1037.0 },
+    "entalpia": { "hf": 48.04, "hfg": 1048.4, "hg": 1096.4 },
+    "entropia": { "sf": 0.0932, "sfg": 1.9426, "sg": 2.0359 }
+  },
+  {
+    "temp_F": 82,
+    "pressao_psia": 0.5409,
+    "vol_esp": { "vf": 0.01608, "vg": 595.6 },
+    "energia_int": { "uf": 50.03, "ufg": 987.7, "ug": 1037.7 },
+    "entalpia": { "hf": 50.03, "hfg": 1047.3, "hg": 1097.3 },
+    "entropia": { "sf": 0.0969, "sfg": 1.9334, "sg": 2.0303 }
+  },
+  {
+    "temp_F": 84,
+    "pressao_psia": 0.577,
+    "vol_esp": { "vf": 0.01608, "vg": 560.3 },
+    "energia_int": { "uf": 52.03, "ufg": 986.3, "ug": 1038.3 },
+    "entalpia": { "hf": 52.03, "hfg": 1046.1, "hg": 1098.2 },
+    "entropia": { "sf": 0.1006, "sfg": 1.9242, "sg": 2.0248 }
+  },
+  {
+    "temp_F": 86,
+    "pressao_psia": 0.6152,
+    "vol_esp": { "vf": 0.01609, "vg": 527.5 },
+    "energia_int": { "uf": 54.02, "ufg": 985.0, "ug": 1039.0 },
+    "entalpia": { "hf": 54.03, "hfg": 1045.0, "hg": 1099.0 },
+    "entropia": { "sf": 0.1043, "sfg": 1.9151, "sg": 2.0193 }
+  },
+  {
+    "temp_F": 88,
+    "pressao_psia": 0.6555,
+    "vol_esp": { "vf": 0.01609, "vg": 496.8 },
+    "energia_int": { "uf": 56.02, "ufg": 983.6, "ug": 1039.6 },
+    "entalpia": { "hf": 56.02, "hfg": 1043.9, "hg": 1099.9 },
+    "entropia": { "sf": 0.1079, "sfg": 1.906, "sg": 2.0139 }
+  },
+  {
+    "temp_F": 90,
+    "pressao_psia": 0.6981,
+    "vol_esp": { "vf": 0.0161, "vg": 468.1 },
+    "energia_int": { "uf": 58.02, "ufg": 982.3, "ug": 1040.3 },
+    "entalpia": { "hf": 58.02, "hfg": 1042.7, "hg": 1100.8 },
+    "entropia": { "sf": 0.1115, "sfg": 1.897, "sg": 2.0086 }
+  },
+  {
+    "temp_F": 92,
+    "pressao_psia": 0.7431,
+    "vol_esp": { "vf": 0.0161, "vg": 441.3 },
+    "energia_int": { "uf": 60.01, "ufg": 980.9, "ug": 1040.9 },
+    "entalpia": { "hf": 60.01, "hfg": 1041.6, "hg": 1101.6 },
+    "entropia": { "sf": 0.1152, "sfg": 1.8881, "sg": 2.0033 }
+  },
+  {
+    "temp_F": 94,
+    "pressao_psia": 0.7906,
+    "vol_esp": { "vf": 0.01611, "vg": 416.3 },
+    "energia_int": { "uf": 62.01, "ufg": 979.6, "ug": 1041.6 },
+    "entalpia": { "hf": 62.01, "hfg": 1040.5, "hg": 1102.5 },
+    "entropia": { "sf": 0.1188, "sfg": 1.8792, "sg": 1.998 }
+  },
+  {
+    "temp_F": 96,
+    "pressao_psia": 0.8407,
+    "vol_esp": { "vf": 0.01612, "vg": 392.9 },
+    "energia_int": { "uf": 64.0, "ufg": 978.2, "ug": 1042.2 },
+    "entalpia": { "hf": 64.01, "hfg": 1039.3, "hg": 1103.3 },
+    "entropia": { "sf": 0.1224, "sfg": 1.8704, "sg": 1.9928 }
+  },
+  {
+    "temp_F": 98,
+    "pressao_psia": 0.8936,
+    "vol_esp": { "vf": 0.01612, "vg": 370.9 },
+    "energia_int": { "uf": 66.0, "ufg": 976.9, "ug": 1042.9 },
+    "entalpia": { "hf": 66.0, "hfg": 1038.2, "hg": 1104.2 },
+    "entropia": { "sf": 0.126, "sfg": 1.8617, "sg": 1.9876 }
+  },
+  {
+    "temp_F": 100,
+    "pressao_psia": 0.9492,
+    "vol_esp": { "vf": 0.01613, "vg": 350.4 },
+    "energia_int": { "uf": 68.0, "ufg": 975.5, "ug": 1043.5 },
+    "entalpia": { "hf": 68.0, "hfg": 1037.1, "hg": 1105.1 },
+    "entropia": { "sf": 0.1295, "sfg": 1.853, "sg": 1.9825 }
+  },
+  {
+    "temp_F": 102,
+    "pressao_psia": 1.0079,
+    "vol_esp": { "vf": 0.01614, "vg": 331.1 },
+    "energia_int": { "uf": 69.99, "ufg": 974.2, "ug": 1044.2 },
+    "entalpia": { "hf": 70.0, "hfg": 1035.9, "hg": 1105.9 },
+    "entropia": { "sf": 0.1331, "sfg": 1.8444, "sg": 1.9775 }
+  },
+  {
+    "temp_F": 104,
+    "pressao_psia": 1.0697,
+    "vol_esp": { "vf": 0.01614, "vg": 313.1 },
+    "energia_int": { "uf": 71.99, "ufg": 972.8, "ug": 1044.8 },
+    "entalpia": { "hf": 71.99, "hfg": 1034.8, "hg": 1106.8 },
+    "entropia": { "sf": 0.1366, "sfg": 1.8358, "sg": 1.9725 }
+  },
+  {
+    "temp_F": 106,
+    "pressao_psia": 1.1347,
+    "vol_esp": { "vf": 0.01615, "vg": 296.2 },
+    "energia_int": { "uf": 73.98, "ufg": 971.5, "ug": 1045.4 },
+    "entalpia": { "hf": 73.99, "hfg": 1033.6, "hg": 1107.6 },
+    "entropia": { "sf": 0.1402, "sfg": 1.8273, "sg": 1.9675 }
+  },
+  {
+    "temp_F": 108,
+    "pressao_psia": 1.203,
+    "vol_esp": { "vf": 0.01616, "vg": 280.3 },
+    "energia_int": { "uf": 75.98, "ufg": 970.1, "ug": 1046.1 },
+    "entalpia": { "hf": 75.98, "hfg": 1032.5, "hg": 1108.5 },
+    "entropia": { "sf": 0.1437, "sfg": 1.8188, "sg": 1.9626 }
+  },
+  {
+    "temp_F": 110,
+    "pressao_psia": 1.275,
+    "vol_esp": { "vf": 0.01617, "vg": 265.4 },
+    "energia_int": { "uf": 77.98, "ufg": 968.8, "ug": 1046.7 },
+    "entalpia": { "hf": 77.98, "hfg": 1031.4, "hg": 1109.3 },
+    "entropia": { "sf": 0.1472, "sfg": 1.8105, "sg": 1.9577 }
+  },
+  {
+    "temp_F": 112,
+    "pressao_psia": 1.351,
+    "vol_esp": { "vf": 0.01617, "vg": 251.4 },
+    "energia_int": { "uf": 79.97, "ufg": 967.4, "ug": 1047.4 },
+    "entalpia": { "hf": 79.98, "hfg": 1030.2, "hg": 1110.2 },
+    "entropia": { "sf": 0.1507, "sfg": 1.8021, "sg": 1.9528 }
+  },
+  {
+    "temp_F": 114,
+    "pressao_psia": 1.43,
+    "vol_esp": { "vf": 0.01618, "vg": 238.2 },
+    "energia_int": { "uf": 81.97, "ufg": 966.0, "ug": 1048.0 },
+    "entalpia": { "hf": 81.97, "hfg": 1029.1, "hg": 1111.0 },
+    "entropia": { "sf": 0.1542, "sfg": 1.7938, "sg": 1.948 }
+  },
+  {
+    "temp_F": 116,
+    "pressao_psia": 1.513,
+    "vol_esp": { "vf": 0.01619, "vg": 225.9 },
+    "energia_int": { "uf": 83.97, "ufg": 964.7, "ug": 1048.6 },
+    "entalpia": { "hf": 83.97, "hfg": 1027.9, "hg": 1111.9 },
+    "entropia": { "sf": 0.1577, "sfg": 1.7856, "sg": 1.9433 }
+  },
+  {
+    "temp_F": 118,
+    "pressao_psia": 1.601,
+    "vol_esp": { "vf": 0.0162, "vg": 214.2 },
+    "energia_int": { "uf": 85.96, "ufg": 963.3, "ug": 1049.3 },
+    "entalpia": { "hf": 85.97, "hfg": 1026.8, "hg": 1112.7 },
+    "entropia": { "sf": 0.1611, "sfg": 1.7774, "sg": 1.9386 }
+  },
+  {
+    "temp_F": 120,
+    "pressao_psia": 1.693,
+    "vol_esp": { "vf": 0.0162, "vg": 203.26 },
+    "energia_int": { "uf": 87.96, "ufg": 962.0, "ug": 1049.9 },
+    "entalpia": { "hf": 87.97, "hfg": 1025.6, "hg": 1113.6 },
+    "entropia": { "sf": 0.1646, "sfg": 1.7693, "sg": 1.9339 }
+  },
+  {
+    "temp_F": 122,
+    "pressao_psia": 1.789,
+    "vol_esp": { "vf": 0.01621, "vg": 192.95 },
+    "energia_int": { "uf": 89.96, "ufg": 960.6, "ug": 1050.6 },
+    "entalpia": { "hf": 89.96, "hfg": 1024.5, "hg": 1114.4 },
+    "entropia": { "sf": 0.168, "sfg": 1.7613, "sg": 1.9293 }
+  },
+  {
+    "temp_F": 124,
+    "pressao_psia": 1.89,
+    "vol_esp": { "vf": 0.01622, "vg": 183.24 },
+    "energia_int": { "uf": 91.96, "ufg": 959.2, "ug": 1051.2 },
+    "entalpia": { "hf": 91.96, "hfg": 1023.3, "hg": 1115.3 },
+    "entropia": { "sf": 0.1715, "sfg": 1.7533, "sg": 1.9247 }
+  },
+  {
+    "temp_F": 126,
+    "pressao_psia": 1.996,
+    "vol_esp": { "vf": 0.01623, "vg": 174.09 },
+    "energia_int": { "uf": 93.95, "ufg": 957.9, "ug": 1051.8 },
+    "entalpia": { "hf": 93.96, "hfg": 1022.2, "hg": 1116.1 },
+    "entropia": { "sf": 0.1749, "sfg": 1.7453, "sg": 1.9202 }
+  },
+  {
+    "temp_F": 128,
+    "pressao_psia": 2.107,
+    "vol_esp": { "vf": 0.01624, "vg": 165.47 },
+    "energia_int": { "uf": 95.95, "ufg": 956.5, "ug": 1052.4 },
+    "entalpia": { "hf": 95.96, "hfg": 1021.0, "hg": 1117.0 },
+    "entropia": { "sf": 0.1783, "sfg": 1.7374, "sg": 1.9157 }
+  },
+  {
+    "temp_F": 130,
+    "pressao_psia": 2.223,
+    "vol_esp": { "vf": 0.01625, "vg": 157.33 },
+    "energia_int": { "uf": 97.95, "ufg": 955.1, "ug": 1053.1 },
+    "entalpia": { "hf": 97.96, "hfg": 1019.8, "hg": 1117.8 },
+    "entropia": { "sf": 0.1817, "sfg": 1.7295, "sg": 1.9112 }
+  },
+  {
+    "temp_F": 132,
+    "pressao_psia": 2.345,
+    "vol_esp": { "vf": 0.01626, "vg": 149.66 },
+    "energia_int": { "uf": 99.95, "ufg": 953.8, "ug": 1053.7 },
+    "entalpia": { "hf": 99.95, "hfg": 1018.7, "hg": 1118.6 },
+    "entropia": { "sf": 0.1851, "sfg": 1.7217, "sg": 1.9068 }
+  },
+  {
+    "temp_F": 134,
+    "pressao_psia": 2.472,
+    "vol_esp": { "vf": 0.01626, "vg": 142.41 },
+    "energia_int": { "uf": 101.94, "ufg": 952.4, "ug": 1054.3 },
+    "entalpia": { "hf": 101.95, "hfg": 1017.5, "hg": 1119.5 },
+    "entropia": { "sf": 0.1884, "sfg": 1.714, "sg": 1.9024 }
+  },
+  {
+    "temp_F": 136,
+    "pressao_psia": 2.605,
+    "vol_esp": { "vf": 0.01627, "vg": 135.57 },
+    "energia_int": { "uf": 103.94, "ufg": 951.0, "ug": 1055.0 },
+    "entalpia": { "hf": 103.95, "hfg": 1016.4, "hg": 1120.3 },
+    "entropia": { "sf": 0.1918, "sfg": 1.7063, "sg": 1.898 }
+  },
+  {
+    "temp_F": 138,
+    "pressao_psia": 2.744,
+    "vol_esp": { "vf": 0.01628, "vg": 129.11 },
+    "energia_int": { "uf": 105.94, "ufg": 949.6, "ug": 1055.6 },
+    "entalpia": { "hf": 105.95, "hfg": 1015.2, "hg": 1121.1 },
+    "entropia": { "sf": 0.1951, "sfg": 1.6986, "sg": 1.8937 }
+  },
+  {
+    "temp_F": 140,
+    "pressao_psia": 2.889,
+    "vol_esp": { "vf": 0.01629, "vg": 123.0 },
+    "energia_int": { "uf": 107.94, "ufg": 948.3, "ug": 1056.2 },
+    "entalpia": { "hf": 107.95, "hfg": 1014.0, "hg": 1122.0 },
+    "entropia": { "sf": 0.1985, "sfg": 1.691, "sg": 1.8895 }
+  },
+  {
+    "temp_F": 142,
+    "pressao_psia": 3.041,
+    "vol_esp": { "vf": 0.0163, "vg": 117.22 },
+    "energia_int": { "uf": 109.94, "ufg": 946.9, "ug": 1056.8 },
+    "entalpia": { "hf": 109.95, "hfg": 1012.9, "hg": 1122.8 },
+    "entropia": { "sf": 0.2018, "sfg": 1.6834, "sg": 1.8852 }
+  },
+  {
+    "temp_F": 144,
+    "pressao_psia": 3.2,
+    "vol_esp": { "vf": 0.01631, "vg": 111.76 },
+    "energia_int": { "uf": 111.94, "ufg": 945.5, "ug": 1057.5 },
+    "entalpia": { "hf": 111.95, "hfg": 1011.7, "hg": 1123.6 },
+    "entropia": { "sf": 0.2051, "sfg": 1.6759, "sg": 1.881 }
+  },
+  {
+    "temp_F": 146,
+    "pressao_psia": 3.365,
+    "vol_esp": { "vf": 0.01632, "vg": 106.59 },
+    "energia_int": { "uf": 113.94, "ufg": 944.1, "ug": 1058.1 },
+    "entalpia": { "hf": 113.95, "hfg": 1010.5, "hg": 1124.5 },
+    "entropia": { "sf": 0.2084, "sfg": 1.6684, "sg": 1.8769 }
+  },
+  {
+    "temp_F": 148,
+    "pressao_psia": 3.538,
+    "vol_esp": { "vf": 0.01633, "vg": 101.7 },
+    "energia_int": { "uf": 115.94, "ufg": 942.8, "ug": 1058.7 },
+    "entalpia": { "hf": 115.95, "hfg": 1009.3, "hg": 1125.3 },
+    "entropia": { "sf": 0.2117, "sfg": 1.661, "sg": 1.8727 }
+  },
+  {
+    "temp_F": 150,
+    "pressao_psia": 3.718,
+    "vol_esp": { "vf": 0.01634, "vg": 97.07 },
+    "energia_int": { "uf": 117.94, "ufg": 941.4, "ug": 1059.3 },
+    "entalpia": { "hf": 117.95, "hfg": 1008.2, "hg": 1126.1 },
+    "entropia": { "sf": 0.215, "sfg": 1.6536, "sg": 1.8686 }
+  },
+  {
+    "temp_F": 152,
+    "pressao_psia": 3.906,
+    "vol_esp": { "vf": 0.01635, "vg": 92.68 },
+    "energia_int": { "uf": 119.94, "ufg": 940.0, "ug": 1059.9 },
+    "entalpia": { "hf": 119.95, "hfg": 1007.0, "hg": 1126.9 },
+    "entropia": { "sf": 0.2183, "sfg": 1.6463, "sg": 1.8646 }
+  },
+  {
+    "temp_F": 154,
+    "pressao_psia": 4.102,
+    "vol_esp": { "vf": 0.01636, "vg": 88.52 },
+    "energia_int": { "uf": 121.94, "ufg": 938.6, "ug": 1060.5 },
+    "entalpia": { "hf": 121.95, "hfg": 1005.8, "hg": 1127.7 },
+    "entropia": { "sf": 0.2216, "sfg": 1.639, "sg": 1.8606 }
+  },
+  {
+    "temp_F": 156,
+    "pressao_psia": 4.307,
+    "vol_esp": { "vf": 0.01637, "vg": 84.57 },
+    "energia_int": { "uf": 123.94, "ufg": 937.2, "ug": 1061.2 },
+    "entalpia": { "hf": 123.95, "hfg": 1004.6, "hg": 1128.6 },
+    "entropia": { "sf": 0.2248, "sfg": 1.6318, "sg": 1.8566 }
+  },
+  {
+    "temp_F": 158,
+    "pressao_psia": 4.52,
+    "vol_esp": { "vf": 0.01638, "vg": 80.83 },
+    "energia_int": { "uf": 125.94, "ufg": 935.8, "ug": 1061.8 },
+    "entalpia": { "hf": 125.96, "hfg": 1003.4, "hg": 1129.4 },
+    "entropia": { "sf": 0.2281, "sfg": 1.6245, "sg": 1.8526 }
+  },
+  {
+    "temp_F": 160,
+    "pressao_psia": 4.741,
+    "vol_esp": { "vf": 0.0164, "vg": 77.29 },
+    "energia_int": { "uf": 127.94, "ufg": 934.4, "ug": 1062.4 },
+    "entalpia": { "hf": 127.96, "hfg": 1002.2, "hg": 1130.2 },
+    "entropia": { "sf": 0.2313, "sfg": 1.6174, "sg": 1.8487 }
+  },
+
+  {
+    "temp_F": 162,
+    "pressao_psia": 4.972,
+    "vol_esp": { "vf": 0.01641, "vg": 73.92 },
+    "energia_int": { "uf": 129.96, "ug": 1063.0 },
+    "entalpia": { "hf": 129.96, "hfg": 1001.0, "hg": 1131.0 },
+    "entropia": { "sf": 0.2345, "sg": 1.8448 }
+  },
+  {
+    "temp_F": 170,
+    "pressao_psia": 5.993,
+    "vol_esp": { "vf": 0.01645, "vg": 62.06 },
+    "energia_int": { "uf": 137.97, "ug": 1065.4 },
+    "entalpia": { "hf": 137.97, "hfg": 996.2, "hg": 1134.2 },
+    "entropia": { "sf": 0.2473, "sg": 1.8295 }
+  },
+  {
+    "temp_F": 180,
+    "pressao_psia": 7.511,
+    "vol_esp": { "vf": 0.01651, "vg": 50.22 },
+    "energia_int": { "uf": 148.0, "ug": 1068.4 },
+    "entalpia": { "hf": 148.01, "hfg": 990.2, "hg": 1138.2 },
+    "entropia": { "sf": 0.2631, "sg": 1.8111 }
+  },
+  {
+    "temp_F": 190,
+    "pressao_psia": 9.34,
+    "vol_esp": { "vf": 0.01657, "vg": 40.96 },
+    "energia_int": { "uf": 158.04, "ug": 1071.3 },
+    "entalpia": { "hf": 158.04, "hfg": 984.1, "hg": 1142.1 },
+    "entropia": { "sf": 0.2787, "sg": 1.7934 }
+  },
+  {
+    "temp_F": 200,
+    "pressao_psia": 11.526,
+    "vol_esp": { "vf": 0.01664, "vg": 33.64 },
+    "energia_int": { "uf": 168.09, "ug": 1074.2 },
+    "entalpia": { "hf": 168.09, "hfg": 977.9, "hg": 1146.0 },
+    "entropia": { "sf": 0.294, "sg": 1.7764 }
+  },
+  {
+    "temp_F": 212,
+    "pressao_psia": 14.696,
+    "vol_esp": { "vf": 0.01672, "vg": 26.8 },
+    "energia_int": { "uf": 180.17, "ug": 1077.6 },
+    "entalpia": { "hf": 180.17, "hfg": 970.3, "hg": 1150.5 },
+    "entropia": { "sf": 0.3121, "sg": 1.7568 }
+  },
+  {
+    "temp_F": 250,
+    "pressao_psia": 29.82,
+    "vol_esp": { "vf": 0.01701, "vg": 13.82 },
+    "energia_int": { "uf": 218.59, "ug": 1087.8 },
+    "entalpia": { "hf": 218.67, "hfg": 945.4, "hg": 1164.0 },
+    "entropia": { "sf": 0.3677, "sg": 1.693 }
+  },
+  {
+    "temp_F": 300,
+    "pressao_psia": 67.01,
+    "vol_esp": { "vf": 0.01745, "vg": 6.466 },
+    "energia_int": { "uf": 269.5, "ug": 1099.6 },
+    "entalpia": { "hf": 269.71, "hfg": 910.0, "hg": 1179.7 },
+    "entropia": { "sf": 0.4372, "sg": 1.6351 }
+  },
+  {
+    "temp_F": 350,
+    "pressao_psia": 134.6,
+    "vol_esp": { "vf": 0.01799, "vg": 3.342 },
+    "energia_int": { "uf": 321.31, "ug": 1109.1 },
+    "entalpia": { "hf": 321.76, "hfg": 870.6, "hg": 1192.3 },
+    "entropia": { "sf": 0.5032, "sg": 1.5784 }
+  },
+  {
+    "temp_F": 400,
+    "pressao_psia": 247.26,
+    "vol_esp": { "vf": 0.01864, "vg": 1.863 },
+    "energia_int": { "uf": 374.24, "ug": 1115.7 },
+    "entalpia": { "hf": 375.09, "hfg": 825.9, "hg": 1201.0 },
+    "entropia": { "sf": 0.5667, "sg": 1.5274 }
+  },
+  {
+    "temp_F": 460,
+    "pressao_psia": 466.87,
+    "vol_esp": { "vf": 0.0196, "vg": 0.9942 },
+    "energia_int": { "uf": 439.84, "ug": 1118.9 },
+    "entalpia": { "hf": 441.54, "hfg": 763.2, "hg": 1204.8 },
+    "entropia": { "sf": 0.6405, "sg": 1.4704 }
+  },
+  {
+    "temp_F": 470,
+    "pressao_psia": 514.67,
+    "vol_esp": { "vf": 0.0198, "vg": 0.9008 },
+    "energia_int": { "uf": 451.06, "ug": 1118.8 },
+    "entalpia": { "hf": 452.95, "hfg": 751.6, "hg": 1204.6 },
+    "entropia": { "sf": 0.6527, "sg": 1.4611 }
+  },
+  {
+    "temp_F": 480,
+    "pressao_psia": 566.15,
+    "vol_esp": { "vf": 0.02, "vg": 0.8172 },
+    "energia_int": { "uf": 462.39, "ug": 1118.5 },
+    "entalpia": { "hf": 464.48, "hfg": 739.6, "hg": 1204.1 },
+    "entropia": { "sf": 0.6648, "sg": 1.4518 }
+  },
+  {
+    "temp_F": 490,
+    "pressao_psia": 621.48,
+    "vol_esp": { "vf": 0.0202, "vg": 0.7422 },
+    "energia_int": { "uf": 473.82, "ug": 1118.0 },
+    "entalpia": { "hf": 476.14, "hfg": 727.2, "hg": 1203.3 },
+    "entropia": { "sf": 0.6769, "sg": 1.4426 }
+  },
+  {
+    "temp_F": 500,
+    "pressao_psia": 680.86,
+    "vol_esp": { "vf": 0.0204, "vg": 0.6749 },
+    "energia_int": { "uf": 485.36, "ug": 1117.2 },
+    "entalpia": { "hf": 487.94, "hfg": 714.3, "hg": 1202.2 },
+    "entropia": { "sf": 0.689, "sg": 1.4333 }
+  },
+  {
+    "temp_F": 510,
+    "pressao_psia": 744.47,
+    "vol_esp": { "vf": 0.0207, "vg": 0.6143 },
+    "energia_int": { "uf": 497.0, "ug": 1116.2 },
+    "entalpia": { "hf": 499.9, "hfg": 700.9, "hg": 1200.8 },
+    "entropia": { "sf": 0.7012, "sg": 1.424 }
+  },
+  {
+    "temp_F": 520,
+    "pressao_psia": 812.53,
+    "vol_esp": { "vf": 0.0209, "vg": 0.5596 },
+    "energia_int": { "uf": 508.8, "ug": 1114.9 },
+    "entalpia": { "hf": 512.0, "hfg": 687.0, "hg": 1199.0 },
+    "entropia": { "sf": 0.7133, "sg": 1.4146 }
+  },
+  {
+    "temp_F": 530,
+    "pressao_psia": 885.23,
+    "vol_esp": { "vf": 0.0212, "vg": 0.51 },
+    "energia_int": { "uf": 520.8, "ug": 1113.3 },
+    "entalpia": { "hf": 524.3, "hfg": 672.6, "hg": 1196.9 },
+    "entropia": { "sf": 0.7255, "sg": 1.4051 }
+  },
+  {
+    "temp_F": 540,
+    "pressao_psia": 962.79,
+    "vol_esp": { "vf": 0.0215, "vg": 0.4651 },
+    "energia_int": { "uf": 532.9, "ug": 1111.4 },
+    "entalpia": { "hf": 536.8, "hfg": 657.5, "hg": 1194.3 },
+    "entropia": { "sf": 0.7378, "sg": 1.3954 }
+  },
+  {
+    "temp_F": 550,
+    "pressao_psia": 1045.4,
+    "vol_esp": { "vf": 0.0218, "vg": 0.4243 },
+    "energia_int": { "uf": 545.3, "ug": 1109.1 },
+    "entalpia": { "hf": 549.5, "hfg": 641.8, "hg": 1191.2 },
+    "entropia": { "sf": 0.7501, "sg": 1.3856 }
+  },
+  {
+    "temp_F": 560,
+    "pressao_psia": 1133.4,
+    "vol_esp": { "vf": 0.0221, "vg": 0.3871 },
+    "energia_int": { "uf": 557.8, "ug": 1106.5 },
+    "entalpia": { "hf": 562.4, "hfg": 625.3, "hg": 1187.7 },
+    "entropia": { "sf": 0.7625, "sg": 1.3757 }
+  },
+  {
+    "temp_F": 570,
+    "pressao_psia": 1226.9,
+    "vol_esp": { "vf": 0.0224, "vg": 0.3532 },
+    "energia_int": { "uf": 570.5, "ug": 1103.4 },
+    "entalpia": { "hf": 575.6, "hfg": 608.0, "hg": 1183.6 },
+    "entropia": { "sf": 0.775, "sg": 1.3654 }
+  },
+  {
+    "temp_F": 580,
+    "pressao_psia": 1326.2,
+    "vol_esp": { "vf": 0.0228, "vg": 0.3222 },
+    "energia_int": { "uf": 583.5, "ug": 1099.9 },
+    "entalpia": { "hf": 589.1, "hfg": 589.9, "hg": 1179.0 },
+    "entropia": { "sf": 0.7876, "sg": 1.355 }
+  },
+  {
+    "temp_F": 590,
+    "pressao_psia": 1431.5,
+    "vol_esp": { "vf": 0.0232, "vg": 0.2937 },
+    "energia_int": { "uf": 596.8, "ug": 1095.9 },
+    "entalpia": { "hf": 602.9, "hfg": 570.8, "hg": 1173.7 },
+    "entropia": { "sf": 0.8004, "sg": 1.3442 }
+  },
+  {
+    "temp_F": 600,
+    "pressao_psia": 1543.2,
+    "vol_esp": { "vf": 0.0236, "vg": 0.2675 },
+    "energia_int": { "uf": 610.4, "ug": 1091.3 },
+    "entalpia": { "hf": 617.1, "hfg": 550.6, "hg": 1167.7 },
+    "entropia": { "sf": 0.8134, "sg": 1.333 }
+  },
+  {
+    "temp_F": 610,
+    "pressao_psia": 1661.6,
+    "vol_esp": { "vf": 0.0241, "vg": 0.2433 },
+    "energia_int": { "uf": 624.4, "ug": 1086.1 },
+    "entalpia": { "hf": 631.8, "hfg": 529.2, "hg": 1160.9 },
+    "entropia": { "sf": 0.8267, "sg": 1.3214 }
+  },
+  {
+    "temp_F": 620,
+    "pressao_psia": 1786.9,
+    "vol_esp": { "vf": 0.0247, "vg": 0.2208 },
+    "energia_int": { "uf": 638.8, "ug": 1080.2 },
+    "entalpia": { "hf": 646.9, "hfg": 506.3, "hg": 1153.2 },
+    "entropia": { "sf": 0.8403, "sg": 1.3092 }
+  },
+  {
+    "temp_F": 630,
+    "pressao_psia": 1919.5,
+    "vol_esp": { "vf": 0.0253, "vg": 0.1999 },
+    "energia_int": { "uf": 653.7, "ug": 1073.2 },
+    "entalpia": { "hf": 662.7, "hfg": 481.6, "hg": 1144.2 },
+    "entropia": { "sf": 0.8542, "sg": 1.2962 }
+  },
+  {
+    "temp_F": 635,
+    "pressao_psia": 1988.7,
+    "vol_esp": { "vf": 0.0256, "vg": 0.1899 },
+    "energia_int": { "uf": 661.4, "ug": 1069.3 },
+    "entalpia": { "hf": 670.8, "hfg": 468.4, "hg": 1139.2 },
+    "entropia": { "sf": 0.8614, "sg": 1.2893 }
+  },
+  {
+    "temp_F": 640,
+    "pressao_psia": 2059.9,
+    "vol_esp": { "vf": 0.0259, "vg": 0.1802 },
+    "energia_int": { "uf": 669.2, "ug": 1065.0 },
+    "entalpia": { "hf": 679.1, "hfg": 454.6, "hg": 1133.7 },
+    "entropia": { "sf": 0.8686, "sg": 1.2821 }
+  },
+  {
+    "temp_F": 645,
+    "pressao_psia": 2133.1,
+    "vol_esp": { "vf": 0.0263, "vg": 0.1708 },
+    "energia_int": { "uf": 677.3, "ug": 1060.4 },
+    "entalpia": { "hf": 687.7, "hfg": 440.2, "hg": 1127.8 },
+    "entropia": { "sf": 0.8761, "sg": 1.2746 }
+  },
+  {
+    "temp_F": 650,
+    "pressao_psia": 2208.4,
+    "vol_esp": { "vf": 0.0267, "vg": 0.1617 },
+    "energia_int": { "uf": 685.5, "ug": 1055.3 },
+    "entalpia": { "hf": 696.4, "hfg": 425.0, "hg": 1121.4 },
+    "entropia": { "sf": 0.8837, "sg": 1.2667 }
+  },
+  {
+    "temp_F": 655,
+    "pressao_psia": 2285.9,
+    "vol_esp": { "vf": 0.0272, "vg": 0.1529 },
+    "energia_int": { "uf": 694.0, "ug": 1049.8 },
+    "entalpia": { "hf": 705.5, "hfg": 409.0, "hg": 1114.5 },
+    "entropia": { "sf": 0.8915, "sg": 1.2584 }
+  },
+  {
+    "temp_F": 660,
+    "pressao_psia": 2365.7,
+    "vol_esp": { "vf": 0.0277, "vg": 0.1443 },
+    "energia_int": { "uf": 702.8, "ug": 1043.9 },
+    "entalpia": { "hf": 714.9, "hfg": 392.1, "hg": 1107.0 },
+    "entropia": { "sf": 0.8995, "sg": 1.2498 }
+  },
+  {
+    "temp_F": 662,
+    "pressao_psia": 2398.2,
+    "vol_esp": { "vf": 0.0279, "vg": 0.1409 },
+    "energia_int": { "uf": 706.4, "ug": 1041.4 },
+    "entalpia": { "hf": 718.7, "hfg": 385.2, "hg": 1103.9 },
+    "entropia": { "sf": 0.9029, "sg": 1.2462 }
+  },
+  {
+    "temp_F": 664,
+    "pressao_psia": 2431.1,
+    "vol_esp": { "vf": 0.0281, "vg": 0.1376 },
+    "energia_int": { "uf": 710.2, "ug": 1038.7 },
+    "entalpia": { "hf": 722.9, "hfg": 377.7, "hg": 1100.6 },
+    "entropia": { "sf": 0.9064, "sg": 1.2425 }
+  },
+  {
+    "temp_F": 666,
+    "pressao_psia": 2464.4,
+    "vol_esp": { "vf": 0.0283, "vg": 0.1342 },
+    "energia_int": { "uf": 714.2, "ug": 1035.9 },
+    "entalpia": { "hf": 727.1, "hfg": 370.0, "hg": 1097.1 },
+    "entropia": { "sf": 0.91, "sg": 1.2387 }
+  },
+  {
+    "temp_F": 668,
+    "pressao_psia": 2498.1,
+    "vol_esp": { "vf": 0.0286, "vg": 0.1309 },
+    "energia_int": { "uf": 718.3, "ug": 1033.0 },
+    "entalpia": { "hf": 731.5, "hfg": 362.1, "hg": 1093.5 },
+    "entropia": { "sf": 0.9137, "sg": 1.2347 }
+  },
+  {
+    "temp_F": 670,
+    "pressao_psia": 2532.2,
+    "vol_esp": { "vf": 0.0288, "vg": 0.1275 },
+    "energia_int": { "uf": 722.3, "ug": 1030.0 },
+    "entalpia": { "hf": 735.8, "hfg": 354.0, "hg": 1089.8 },
+    "entropia": { "sf": 0.9174, "sg": 1.2307 }
+  },
+  {
+    "temp_F": 672,
+    "pressao_psia": 2566.6,
+    "vol_esp": { "vf": 0.0291, "vg": 0.1242 },
+    "energia_int": { "uf": 726.4, "ug": 1026.9 },
+    "entalpia": { "hf": 740.2, "hfg": 345.7, "hg": 1085.9 },
+    "entropia": { "sf": 0.9211, "sg": 1.2266 }
+  },
+  {
+    "temp_F": 674,
+    "pressao_psia": 2601.5,
+    "vol_esp": { "vf": 0.0294, "vg": 0.121 },
+    "energia_int": { "uf": 730.5, "ug": 1023.6 },
+    "entalpia": { "hf": 744.7, "hfg": 337.2, "hg": 1081.9 },
+    "entropia": { "sf": 0.9249, "sg": 1.2223 }
+  },
+  {
+    "temp_F": 676,
+    "pressao_psia": 2636.8,
+    "vol_esp": { "vf": 0.0297, "vg": 0.1177 },
+    "energia_int": { "uf": 734.7, "ug": 1020.2 },
+    "entalpia": { "hf": 749.2, "hfg": 328.5, "hg": 1077.6 },
+    "entropia": { "sf": 0.9287, "sg": 1.2179 }
+  },
+  {
+    "temp_F": 678,
+    "pressao_psia": 2672.5,
+    "vol_esp": { "vf": 0.03, "vg": 0.1144 },
+    "energia_int": { "uf": 738.9, "ug": 1016.6 },
+    "entalpia": { "hf": 753.8, "hfg": 319.4, "hg": 1073.2 },
+    "entropia": { "sf": 0.9326, "sg": 1.2133 }
+  },
+  {
+    "temp_F": 680,
+    "pressao_psia": 2708.6,
+    "vol_esp": { "vf": 0.0304, "vg": 0.1112 },
+    "energia_int": { "uf": 743.2, "ug": 1012.8 },
+    "entalpia": { "hf": 758.5, "hfg": 310.1, "hg": 1068.5 },
+    "entropia": { "sf": 0.9365, "sg": 1.2086 }
+  },
+  {
+    "temp_F": 682,
+    "pressao_psia": 2745.1,
+    "vol_esp": { "vf": 0.0307, "vg": 0.1079 },
+    "energia_int": { "uf": 747.7, "ug": 1008.8 },
+    "entalpia": { "hf": 763.3, "hfg": 300.4, "hg": 1063.6 },
+    "entropia": { "sf": 0.9406, "sg": 1.2036 }
+  },
+  {
+    "temp_F": 684,
+    "pressao_psia": 2782.1,
+    "vol_esp": { "vf": 0.0311, "vg": 0.1046 },
+    "energia_int": { "uf": 752.2, "ug": 1004.6 },
+    "entalpia": { "hf": 768.2, "hfg": 290.2, "hg": 1058.4 },
+    "entropia": { "sf": 0.9447, "sg": 1.1984 }
+  },
+  {
+    "temp_F": 686,
+    "pressao_psia": 2819.5,
+    "vol_esp": { "vf": 0.0316, "vg": 0.1013 },
+    "energia_int": { "uf": 756.9, "ug": 1000.0 },
+    "entalpia": { "hf": 773.4, "hfg": 279.5, "hg": 1052.9 },
+    "entropia": { "sf": 0.949, "sg": 1.193 }
+  },
+  {
+    "temp_F": 688,
+    "pressao_psia": 2857.4,
+    "vol_esp": { "vf": 0.032, "vg": 0.098 },
+    "energia_int": { "uf": 761.8, "ug": 995.2 },
+    "entalpia": { "hf": 778.8, "hfg": 268.2, "hg": 1047.0 },
+    "entropia": { "sf": 0.9535, "sg": 1.1872 }
+  },
+  {
+    "temp_F": 690,
+    "pressao_psia": 2895.7,
+    "vol_esp": { "vf": 0.0326, "vg": 0.0946 },
+    "energia_int": { "uf": 767.0, "ug": 989.9 },
+    "entalpia": { "hf": 784.5, "hfg": 256.1, "hg": 1040.6 },
+    "entropia": { "sf": 0.9583, "sg": 1.181 }
+  },
+  {
+    "temp_F": 692,
+    "pressao_psia": 2934.5,
+    "vol_esp": { "vf": 0.0331, "vg": 0.0911 },
+    "energia_int": { "uf": 772.5, "ug": 984.1 },
+    "entalpia": { "hf": 790.5, "hfg": 243.1, "hg": 1033.6 },
+    "entropia": { "sf": 0.9634, "sg": 1.1744 }
+  },
+  {
+    "temp_F": 694,
+    "pressao_psia": 2973.7,
+    "vol_esp": { "vf": 0.0338, "vg": 0.0875 },
+    "energia_int": { "uf": 778.5, "ug": 977.7 },
+    "entalpia": { "hf": 797.1, "hfg": 228.8, "hg": 1025.9 },
+    "entropia": { "sf": 0.9689, "sg": 1.1671 }
+  },
+  {
+    "temp_F": 696,
+    "pressao_psia": 3013.4,
+    "vol_esp": { "vf": 0.0345, "vg": 0.0837 },
+    "energia_int": { "uf": 785.1, "ug": 970.5 },
+    "entalpia": { "hf": 804.4, "hfg": 212.8, "hg": 1017.2 },
+    "entropia": { "sf": 0.9749, "sg": 1.1591 }
+  },
+  {
+    "temp_F": 698,
+    "pressao_psia": 3053.6,
+    "vol_esp": { "vf": 0.0355, "vg": 0.0797 },
+    "energia_int": { "uf": 792.6, "ug": 962.2 },
+    "entalpia": { "hf": 812.6, "hfg": 194.6, "hg": 1007.2 },
+    "entropia": { "sf": 0.9818, "sg": 1.1499 }
+  },
+  {
+    "temp_F": 700,
+    "pressao_psia": 3094.3,
+    "vol_esp": { "vf": 0.0366, "vg": 0.0752 },
+    "energia_int": { "uf": 801.5, "ug": 952.1 },
+    "entalpia": { "hf": 822.4, "hfg": 172.7, "hg": 995.2 },
+    "entropia": { "sf": 0.9901, "sg": 1.139 }
+  },
+  {
+    "temp_F": 702,
+    "pressao_psia": 3135.5,
+    "vol_esp": { "vf": 0.0382, "vg": 0.07 },
+    "energia_int": { "uf": 812.8, "ug": 939.1 },
+    "entalpia": { "hf": 835.0, "hfg": 144.7, "hg": 979.7 },
+    "entropia": { "sf": 1.0006, "sg": 1.1252 }
+  },
+  {
+    "temp_F": 704,
+    "pressao_psia": 3177.2,
+    "vol_esp": { "vf": 0.0411, "vg": 0.063 },
+    "energia_int": { "uf": 830.1, "ug": 919.2 },
+    "entalpia": { "hf": 854.2, "hfg": 102.0, "hg": 956.2 },
+    "entropia": { "sf": 1.0169, "sg": 1.1046 }
+  },
+  {
+    "temp_F": 705.47,
+    "pressao_psia": 3208.2,
+    "vol_esp": { "vf": 0.0508, "vg": 0.0508 },
+    "energia_int": { "uf": 875.9, "ug": 875.9 },
+    "entalpia": { "hf": 906.0, "hfg": 0.0, "hg": 906.0 },
+    "entropia": { "sf": 1.0612, "sg": 1.0612 }
+  }
+]

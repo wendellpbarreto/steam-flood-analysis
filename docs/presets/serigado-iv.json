@@ -1,0 +1,47 @@
+{
+  "id": "serigado-iv",
+  "name": "Serigado IV",
+  "description": "Caso de referência - Campo Serigado IV - Projeto de Injeção Contínua de Vapor",
+  "createdAt": "2024-01-01",
+  "isDefault": true,
+  "data": {
+    "common": {
+      "Eb": 0.9,
+      "Tb": 70,
+      "Ts": 500.0,
+      "Tr": 100,
+      "Ps": 315,
+      "K2": 1.2,
+      "rho1C1": 35,
+      "rho2C2": 33,
+      "tYears": 2.5,
+      "So": 0.64,
+      "Sor": 0.15,
+      "gammaO": 0.94,
+      "phi": 0.24,
+      "zn": 66,
+      "zt": 86,
+      "fsd": 0.72,
+      "Fsb": 0.8,
+      "Lv": 713.9,
+      "rhoW": 62.4,
+      "CwTs": 361.91,
+      "CwTr": 77.94,
+      "CwTb": 38.0,
+      "fPVRef": 0.54
+    },
+    "thermalEfficiency": 0.65,
+    "criticalTimeYears": 1.8,
+    "cases": [
+      {
+        "name": "Vazão 1 (565 bbl/d)",
+        "rateBblPerDay": 565
+      },
+      {
+        "name": "Vazão 2 (755 bbl/d)",
+        "rateBblPerDay": 755
+      }
+    ]
+  }
+}
+
