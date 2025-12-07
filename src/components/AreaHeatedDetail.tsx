@@ -60,7 +60,7 @@ export function AreaHeatedDetail({
           <div className="bg-primary/10 rounded-lg p-4 border-2 border-primary/20 space-y-2">
             <BlockMath math={"A_s = \\dfrac{H_0 \\cdot M_1 \\cdot h}{4\\,\\alpha_2\\,M_2^2\\,\\Delta T}\\;G(t_d)"} />
             <div className="text-xs text-muted-foreground bg-background/60 rounded p-2 space-y-1">
-              <p>H₀ = {formatLargeNumber(result.Ho_BtuPerHour)} Btu/h · G(t_d) = {formatNumber(result.GTd, 6)}</p>
+              <p>H₀ = {formatLargeNumber(result.Ho_BtuPerHour, 6)} Btu/h · G(t_d) = {formatNumber(result.GTd, 6)}</p>
               <p>
                 Numerador = H₀·M₁·h = {formatScientific(result.Ho_BtuPerHour * common.rho1C1 * common.zt)} ; Denominador = 4·α₂·M₂²·ΔT ={" "}
                 {formatScientific(4 * result.alpha2 * common.rho2C2 * common.rho2C2 * result.deltaT)}
@@ -95,11 +95,11 @@ export function AreaHeatedDetail({
             <AccordionTrigger>Cálculos detalhados</AccordionTrigger>
             <AccordionContent className="px-3 pb-3 space-y-2">
               <div className="text-xs space-y-2">
-                <p>ΔT = T_s - T_r = {formatNumber(result.deltaT)} °F</p>
-                <p>H_s = {formatNumber(result.enthalpySteam_BtuPerLb, 2)} Btu/lb</p>
-                <p>h_res = {formatNumber(result.enthalpyReservoirFromTable_BtuPerLb, 2)} Btu/lb → H_s - h_res = {formatNumber(result.Ho_enthalpy_BtuPerLb, 2)} Btu/lb</p>
-                <p>ṁ = {formatLargeNumber(result.massRate_lbPerHour)} lb/h → H₀ = {formatLargeNumber(result.Ho_BtuPerHour)} Btu/h</p>
-                <p>α₂ = {formatScientific(result.alpha2)} ft²/h · t = {formatLargeNumber(tHours)} h</p>
+                <p>ΔT = T_s - T_r = {formatNumber(result.deltaT, 4)} °F</p>
+                <p>H_s = {formatNumber(result.enthalpySteam_BtuPerLb, 6)} Btu/lb</p>
+                <p>h_res = {formatNumber(result.enthalpyReservoirFromTable_BtuPerLb, 6)} Btu/lb → H_s - h_res = {formatNumber(result.Ho_enthalpy_BtuPerLb, 6)} Btu/lb</p>
+                <p>ṁ = {formatLargeNumber(result.massRate_lbPerHour, 6)} lb/h → H₀ = {formatLargeNumber(result.Ho_BtuPerHour, 6)} Btu/h</p>
+                <p>α₂ = {formatScientific(result.alpha2)} ft²/h · t = {formatLargeNumber(tHours, 4)} h</p>
                 <p>t_d = {formatNumber(result.tDimensionless, 6)} · G(t_d) = {formatNumber(result.GTd, 6)}</p>
                 <p>M₁ = {formatNumber(common.rho1C1)}; M₂ = {formatNumber(common.rho2C2)}; h = z_t = {formatNumber(common.zt)} ft</p>
               </div>
