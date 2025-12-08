@@ -9,7 +9,6 @@ import { ThermalEfficiencyDetail } from "./components/ThermalEfficiencyDetail";
 import { IntermediateCalculations } from "./components/IntermediateCalculations";
 import { EnergyCards } from "./components/EnergyCards";
 import { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
-import { Separator } from "./components/ui/separator";
 import { Badge } from "./components/ui/badge";
 import { serigadoIVPreset, type PresetData } from "./data/presets";
 import {
@@ -21,6 +20,7 @@ function App() {
   const [presetLoaded, setPresetLoaded] = useState(false);
   const [data, setData] = useState<PresetData | null>(null);
   const [results, setResults] = useState<AreaCalculationResult[]>([]);
+  const [activeCaseIndex, setActiveCaseIndex] = useState(0);
 
   useEffect(() => {
     const preset = serigadoIVPreset.data;
@@ -32,8 +32,11 @@ function App() {
     if (data) {
       const calculatedResults = calculateAllCases(data);
       setResults(calculatedResults);
+      if (activeCaseIndex >= calculatedResults.length) {
+        setActiveCaseIndex(Math.max(0, calculatedResults.length - 1));
+      }
     }
-  }, [data]);
+  }, [data, activeCaseIndex]);
 
   const loadPreset = () => {
     const preset = serigadoIVPreset.data;
@@ -49,6 +52,18 @@ function App() {
     if (data) {
       setData({ ...data, cases });
     }
+  };
+
+  const handlePrevCase = () => {
+    setActiveCaseIndex((prev) =>
+      prev > 0 ? prev - 1 : Math.max(0, results.length - 1)
+    );
+  };
+
+  const handleNextCase = () => {
+    setActiveCaseIndex((prev) =>
+      prev < results.length - 1 ? prev + 1 : 0
+    );
   };
 
   return (
@@ -76,45 +91,69 @@ function App() {
             <div>
               <h2 className="text-2xl font-bold mb-6">Resultados dos Cálculos</h2>
 
-              {results.map((result, index) => (
-                <div key={index} className="mb-12 space-y-6">
-                  <div className="bg-primary/10 p-6 rounded-lg border-2 border-primary/20">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-2xl font-bold">{result.caseName}</h3>
-                      <Badge variant="default" className="text-base px-3 py-1">
-                        Vazão: {result.rateBblPerDay} bbl/d
-                        {result.rateTonsPerDay && ` / ${result.rateTonsPerDay.toFixed(1)} t/d`}
-                      </Badge>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Análise para vazão de injeção de vapor de{" "}
-                      <span className="font-semibold">{result.rateBblPerDay} bbl/d</span>
-                      {result.rateTonsPerDay && (
-                        <>
-                          {" "}
-                          (
-                          <span className="font-semibold">
-                            {result.rateTonsPerDay.toFixed(1)} t/d
-                          </span>
-                          )
-                        </>
-                      )}
-                    </p>
+              <div className="bg-primary/10 p-6 rounded-lg border-2 border-primary/20 mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-2xl font-bold">
+                      {results[activeCaseIndex].caseName}
+                    </h3>
+                    <Badge variant="default" className="text-base px-3 py-1">
+                      Vazão: {results[activeCaseIndex].rateBblPerDay} bbl/d
+                      {results[activeCaseIndex].rateTonsPerDay &&
+                        ` / ${results[activeCaseIndex].rateTonsPerDay!.toFixed(1)} t/d`}
+                    </Badge>
                   </div>
-
-                  <IntermediateCalculations result={result} presetData={data} />
-
-                  <AreaHeatedDetail result={result} presetData={data} />
-
-                  <CriticalTimeDetail result={result} presetData={data} />
-
-                  <ThermalEfficiencyDetail result={result} presetData={data} />
-
-                  <EnergyCards result={result} presetData={data} />
-
-                  {index < results.length - 1 && <Separator className="my-8" />}
+                  <p className="text-sm text-muted-foreground">
+                    Selecione um caso para aplicar os mesmos cálculos (A–H) sem repetir as fórmulas.
+                  </p>
                 </div>
-              ))}
+                <div className="flex items-center gap-2">
+                  <button
+                    className="px-3 py-2 rounded border bg-background hover:bg-muted transition"
+                    onClick={handlePrevCase}
+                    aria-label="Caso anterior"
+                  >
+                    ←
+                  </button>
+                  <span className="text-sm font-semibold">
+                    Caso {activeCaseIndex + 1} de {results.length}
+                  </span>
+                  <button
+                    className="px-3 py-2 rounded border bg-background hover:bg-muted transition"
+                    onClick={handleNextCase}
+                    aria-label="Próximo caso"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+
+              <div className="space-y-8">
+                <IntermediateCalculations
+                  result={results[activeCaseIndex]}
+                  presetData={data}
+                />
+
+                <AreaHeatedDetail
+                  result={results[activeCaseIndex]}
+                  presetData={data}
+                />
+
+                <CriticalTimeDetail
+                  result={results[activeCaseIndex]}
+                  presetData={data}
+                />
+
+                <ThermalEfficiencyDetail
+                  result={results[activeCaseIndex]}
+                  presetData={data}
+                />
+
+                <EnergyCards
+                  result={results[activeCaseIndex]}
+                  presetData={data}
+                />
+              </div>
             </div>
           )}
 
