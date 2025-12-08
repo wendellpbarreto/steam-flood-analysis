@@ -257,12 +257,12 @@ function App() {
       </main>
 
       <footer className="bg-white border-t">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-center gap-3">
+        <div className="container mx-auto px-4 py-6 flex items-center justify-center gap-4">
           <span className="text-sm text-muted-foreground">Desenvolvido por</span>
           <img
             src={poweredByLogo}
             alt="Powered by"
-            className="h-8 w-auto"
+            className="h-24 w-auto"
           />
         </div>
       </footer>
