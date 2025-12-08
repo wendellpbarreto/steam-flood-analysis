@@ -124,32 +124,85 @@ function App() {
             <div>
               <h2 className="text-2xl font-bold mb-6">Resultados dos Cálculos</h2>
 
-              <div className="sticky top-16 z-20 bg-primary/10 p-6 rounded-lg border-2 border-primary/20 mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between backdrop-blur">
-                <div>
-                  <h3 className="text-xl font-bold mb-1">Comparação de casos</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Visualize dois casos lado a lado; use as setas para alternar quando houver mais de 2.
-                  </p>
-                </div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <button
-                    className="px-3 py-2 rounded border bg-background hover:bg-muted transition"
-                    onClick={handlePrevWindow}
-                    aria-label="Casos anteriores"
-                  >
-                    ←
-                  </button>
-                  <span className="text-sm font-semibold">
-                    Casos {caseWindowStart + 1}
-                    {visibleCases.length === 2 && ` e ${caseWindowStart + 2}`} de {results.length}
-                  </span>
-                  <button
-                    className="px-3 py-2 rounded border bg-background hover:bg-muted transition"
-                    onClick={handleNextWindow}
-                    aria-label="Próximos casos"
-                  >
-                    →
-                  </button>
+              <div className="sticky top-0 z-30 bg-primary/10 border-b border-primary/30 backdrop-blur">
+                <div className="container mx-auto px-4 py-3 flex flex-col gap-3">
+                  <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                    <div>
+                      <h3 className="text-lg font-bold">Comparação de casos</h3>
+                      <p className="text-xs text-muted-foreground">
+                        Ajuste vazões aqui; veja dois casos lado a lado. Use as setas para alternar quando houver mais de 2.
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <button
+                        className="px-3 py-2 rounded border bg-background hover:bg-muted transition text-sm"
+                        onClick={handlePrevWindow}
+                        aria-label="Casos anteriores"
+                      >
+                        ←
+                      </button>
+                      <span className="text-sm font-semibold">
+                        Casos {caseWindowStart + 1}
+                        {visibleCases.length === 2 && ` e ${caseWindowStart + 2}`} de {results.length}
+                      </span>
+                      <button
+                        className="px-3 py-2 rounded border bg-background hover:bg-muted transition text-sm"
+                        onClick={handleNextWindow}
+                        aria-label="Próximos casos"
+                      >
+                        →
+                      </button>
+                    </div>
+                  </div>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    {visibleCases.map((result, idx) => (
+                      <div
+                        key={`header-${result.caseName}-${idx}`}
+                        className="rounded border border-primary/20 bg-background/70 p-3 flex flex-col gap-2"
+                      >
+                        <div className="flex items-center gap-2">
+                          <Badge variant="secondary" className="text-[11px] px-2 py-1">
+                            {result.caseName}
+                          </Badge>
+                          <span className="text-[11px] text-muted-foreground">
+                            Vazão atual: {result.rateBblPerDay} bbl/d
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <label className="text-[11px] text-muted-foreground space-y-1">
+                            <span>Vazão (bbl/d)</span>
+                            <input
+                              type="number"
+                              className="w-full rounded border px-2 py-1 text-[12px] bg-background"
+                              value={result.rateBblPerDay}
+                              onChange={(e) =>
+                                updateCaseRate(
+                                  caseWindowStart + idx,
+                                  "rateBblPerDay",
+                                  parseFloat(e.target.value) || 0
+                                )
+                              }
+                            />
+                          </label>
+                          <label className="text-[11px] text-muted-foreground space-y-1">
+                            <span>Vazão (t/d)</span>
+                            <input
+                              type="number"
+                              className="w-full rounded border px-2 py-1 text-[12px] bg-background"
+                              value={result.rateTonsPerDay ?? ""}
+                              onChange={(e) =>
+                                updateCaseRate(
+                                  caseWindowStart + idx,
+                                  "rateTonsPerDay",
+                                  parseFloat(e.target.value) || 0
+                                )
+                              }
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -163,38 +216,6 @@ function App() {
                           Vazão: {result.rateBblPerDay} bbl/d
                           {result.rateTonsPerDay && ` / ${result.rateTonsPerDay.toFixed(1)} t/d`}
                         </Badge>
-                      </div>
-                      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                        <label className="text-xs text-muted-foreground space-y-1">
-                          <span>Vazão (bbl/d)</span>
-                          <input
-                            type="number"
-                            className="w-full rounded border px-3 py-2 text-sm bg-background"
-                            value={result.rateBblPerDay}
-                            onChange={(e) =>
-                              updateCaseRate(
-                                caseWindowStart + idx,
-                                "rateBblPerDay",
-                                parseFloat(e.target.value) || 0
-                              )
-                            }
-                          />
-                        </label>
-                        <label className="text-xs text-muted-foreground space-y-1">
-                          <span>Vazão (t/d)</span>
-                          <input
-                            type="number"
-                            className="w-full rounded border px-3 py-2 text-sm bg-background"
-                            value={result.rateTonsPerDay ?? ""}
-                            onChange={(e) =>
-                              updateCaseRate(
-                                caseWindowStart + idx,
-                                "rateTonsPerDay",
-                                parseFloat(e.target.value) || 0
-                              )
-                            }
-                          />
-                        </label>
                       </div>
                     </div>
 
