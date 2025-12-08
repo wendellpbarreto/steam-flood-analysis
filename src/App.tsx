@@ -127,9 +127,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="space-y-10">
+              <div className="grid gap-8 md:grid-cols-2">
                 {visibleCases.map((result, idx) => (
-                  <div key={`${result.caseName}-${idx}`} className="space-y-8">
+                  <div key={`${result.caseName}-${idx}`} className="space-y-6">
                     <div className="bg-primary/10 p-4 rounded-lg border border-primary/20">
                       <div className="flex flex-wrap items-center gap-3">
                         <h4 className="text-lg font-bold">{result.caseName}</h4>
