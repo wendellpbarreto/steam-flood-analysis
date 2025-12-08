@@ -124,8 +124,8 @@ function App() {
             <div>
               <h2 className="text-2xl font-bold mb-6">Resultados dos Cálculos</h2>
 
-              <div className="sticky top-0 z-30 bg-primary/10 border-b border-primary/30 backdrop-blur">
-                <div className="container mx-auto px-4 py-3 flex flex-col gap-3">
+              <div className="sticky top-20 z-20 bg-primary/10 border-2 border-primary/20 rounded-lg mb-8 backdrop-blur">
+                <div className="px-4 py-3 flex flex-col gap-3">
                   <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                     <div>
                       <h3 className="text-lg font-bold">Comparação de casos</h3>
