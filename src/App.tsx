@@ -20,7 +20,7 @@ function App() {
   const [presetLoaded, setPresetLoaded] = useState(false);
   const [data, setData] = useState<PresetData | null>(null);
   const [results, setResults] = useState<AreaCalculationResult[]>([]);
-  const [activeCaseIndex, setActiveCaseIndex] = useState(0);
+  const [caseWindowStart, setCaseWindowStart] = useState(0);
 
   useEffect(() => {
     const preset = serigadoIVPreset.data;
@@ -32,11 +32,11 @@ function App() {
     if (data) {
       const calculatedResults = calculateAllCases(data);
       setResults(calculatedResults);
-      if (activeCaseIndex >= calculatedResults.length) {
-        setActiveCaseIndex(Math.max(0, calculatedResults.length - 1));
+      if (caseWindowStart >= calculatedResults.length) {
+        setCaseWindowStart(Math.max(0, calculatedResults.length - 2));
       }
     }
-  }, [data, activeCaseIndex]);
+  }, [data, caseWindowStart]);
 
   const loadPreset = () => {
     const preset = serigadoIVPreset.data;
@@ -54,15 +54,22 @@ function App() {
     }
   };
 
-  const handlePrevCase = () => {
-    setActiveCaseIndex((prev) =>
-      prev > 0 ? prev - 1 : Math.max(0, results.length - 1)
+  const visibleCases = results.slice(
+    caseWindowStart,
+    Math.min(results.length, caseWindowStart + 2)
+  );
+
+  const handlePrevWindow = () => {
+    if (results.length <= 2) return;
+    setCaseWindowStart((prev) =>
+      prev - 2 >= 0 ? prev - 2 : Math.max(0, results.length - 2)
     );
   };
 
-  const handleNextCase = () => {
-    setActiveCaseIndex((prev) =>
-      prev < results.length - 1 ? prev + 1 : 0
+  const handleNextWindow = () => {
+    if (results.length <= 2) return;
+    setCaseWindowStart((prev) =>
+      prev + 2 < results.length ? prev + 2 : 0
     );
   };
 
@@ -93,66 +100,53 @@ function App() {
 
               <div className="bg-primary/10 p-6 rounded-lg border-2 border-primary/20 mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-2xl font-bold">
-                      {results[activeCaseIndex].caseName}
-                    </h3>
-                    <Badge variant="default" className="text-base px-3 py-1">
-                      Vazão: {results[activeCaseIndex].rateBblPerDay} bbl/d
-                      {results[activeCaseIndex].rateTonsPerDay &&
-                        ` / ${results[activeCaseIndex].rateTonsPerDay!.toFixed(1)} t/d`}
-                    </Badge>
-                  </div>
+                  <h3 className="text-xl font-bold mb-1">Comparação de casos</h3>
                   <p className="text-sm text-muted-foreground">
-                    Selecione um caso para aplicar os mesmos cálculos (A–H) sem repetir as fórmulas.
+                    Visualize dois casos lado a lado; use as setas para alternar quando houver mais de 2.
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
                   <button
                     className="px-3 py-2 rounded border bg-background hover:bg-muted transition"
-                    onClick={handlePrevCase}
-                    aria-label="Caso anterior"
+                    onClick={handlePrevWindow}
+                    aria-label="Casos anteriores"
                   >
                     ←
                   </button>
                   <span className="text-sm font-semibold">
-                    Caso {activeCaseIndex + 1} de {results.length}
+                    Casos {caseWindowStart + 1}
+                    {visibleCases.length === 2 && ` e ${caseWindowStart + 2}`} de {results.length}
                   </span>
                   <button
                     className="px-3 py-2 rounded border bg-background hover:bg-muted transition"
-                    onClick={handleNextCase}
-                    aria-label="Próximo caso"
+                    onClick={handleNextWindow}
+                    aria-label="Próximos casos"
                   >
                     →
                   </button>
                 </div>
               </div>
 
-              <div className="space-y-8">
-                <IntermediateCalculations
-                  result={results[activeCaseIndex]}
-                  presetData={data}
-                />
+              <div className="space-y-10">
+                {visibleCases.map((result, idx) => (
+                  <div key={`${result.caseName}-${idx}`} className="space-y-8">
+                    <div className="bg-primary/10 p-4 rounded-lg border border-primary/20">
+                      <div className="flex flex-wrap items-center gap-3">
+                        <h4 className="text-lg font-bold">{result.caseName}</h4>
+                        <Badge variant="default" className="text-sm px-3 py-1">
+                          Vazão: {result.rateBblPerDay} bbl/d
+                          {result.rateTonsPerDay && ` / ${result.rateTonsPerDay.toFixed(1)} t/d`}
+                        </Badge>
+                      </div>
+                    </div>
 
-                <AreaHeatedDetail
-                  result={results[activeCaseIndex]}
-                  presetData={data}
-                />
-
-                <CriticalTimeDetail
-                  result={results[activeCaseIndex]}
-                  presetData={data}
-                />
-
-                <ThermalEfficiencyDetail
-                  result={results[activeCaseIndex]}
-                  presetData={data}
-                />
-
-                <EnergyCards
-                  result={results[activeCaseIndex]}
-                  presetData={data}
-                />
+                    <IntermediateCalculations result={result} presetData={data} />
+                    <AreaHeatedDetail result={result} presetData={data} />
+                    <CriticalTimeDetail result={result} presetData={data} />
+                    <ThermalEfficiencyDetail result={result} presetData={data} />
+                    <EnergyCards result={result} presetData={data} />
+                  </div>
+                ))}
               </div>
             </div>
           )}
