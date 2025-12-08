@@ -11,6 +11,7 @@ import { EnergyCards } from "./components/EnergyCards";
 import { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
 import { Badge } from "./components/ui/badge";
 import { serigadoIVPreset, type PresetData } from "./data/presets";
+import poweredByLogo from "./assets/powered-by.jpg";
 import {
   bblPerDayToMetricTonsPerDay,
   metricTonsPerDayToBblPerDay,
@@ -254,6 +255,17 @@ function App() {
           )}
         </div>
       </main>
+
+      <footer className="bg-white border-t">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-center gap-3">
+          <span className="text-sm text-muted-foreground">Desenvolvido por</span>
+          <img
+            src={poweredByLogo}
+            alt="Powered by"
+            className="h-8 w-auto"
+          />
+        </div>
+      </footer>
     </div>
   );
 }
